@@ -1,5 +1,5 @@
 <template>
     <NuxtLayout>
-        <HomeHero />
+        <ProfiloMainProfilo />
     </NuxtLayout>
 </template>

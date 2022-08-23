@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.section-side {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+}
+
+.right-section {
+    justify-content: flex-start;
+
+    .page-title {
+        font-size: $hero-h1-size;
+        margin-top: 2rem;
+    }
+}

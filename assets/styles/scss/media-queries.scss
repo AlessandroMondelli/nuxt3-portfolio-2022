@@ -1,0 +1,54 @@
+//Media queries
+@media screen and ( min-width: $mobile ) {
+    .container {
+        width: $container-width-sm;
+        margin: 0 auto;
+    }
+
+    .content-container {
+        height: calc( $container-height - $nav-height-sm );
+        overflow-y: auto;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    .page-title {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and ( min-width: $tablet ) {
+    .container {
+        width: $container-width-md;
+        margin: 0 auto;
+    }
+
+    .content-container {
+        height: calc( $container-height - $nav-height-md );
+    }
+
+    .main-content {
+        height: inherit;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .page-title {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and ( min-width: $laptop ) {
+    .container {
+        width: $container-width-lg;
+        margin: 0 auto;
+    }
+
+    .content-container {
+        height: calc( $container-height - $nav-height-lg );
+    }
+}
