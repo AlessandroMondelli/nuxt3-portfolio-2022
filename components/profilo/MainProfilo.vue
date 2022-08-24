@@ -1,8 +1,8 @@
 <template>
     <div class="profilo-wrap content-container">
         <div class="container main-content">
-            <ProfiloLeftProfilo />
-            <ProfiloRightProfilo />
+            <CommonHeader :title="'profilo'" />
+            <ProfiloContent />
         </div>
     </div>
 </template>

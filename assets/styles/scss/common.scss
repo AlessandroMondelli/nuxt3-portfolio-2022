@@ -13,10 +13,13 @@ a {
     }
 }
 
-.section-side {
+.main-content {
+    height: inherit;
+}
+
+.section-content {
     display: flex;
     flex-direction: column;
-    height: inherit;
 }
 
 .right-section {

@@ -1,8 +1,8 @@
 <template>
     <div class="hero-wrap content-container">
         <div class="container main-content">
-            <HomeLeftHero />
-            <HomeRightHero />
+            <CommonHeader :title="'amdev'" />
+            <HomeHeroContent />
         </div>
     </div>
 </template>
@@ -17,9 +17,5 @@ export default {
 .hero-wrap {
     background-color: $first-color;
     color: $font-color;
-
-    .main-content {
-        height: inherit;
-    }
 }
 </style>

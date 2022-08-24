@@ -1,5 +1,5 @@
 <template>
-    <div class="left-section section-side profilo-info">
+    <div class="section-content profilo-info">
         <p>
             Ciao! Sono Alessandro, classe '98 e sviluppatore Web che ama il settore IT e imparare ogni giorno qualcosa di nuovo.
         </p>
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.left-section {
+.section-content {
     justify-content: center;
 
     p {

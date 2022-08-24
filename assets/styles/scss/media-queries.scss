@@ -8,12 +8,11 @@
     .content-container {
         height: calc( $container-height - $nav-height-sm );
         overflow-y: auto;
+        overflow-x: hidden;
     }
 
-    .main-content {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: flex-start;
+    .section-content {
+        height: calc( 100% - $nav-height-sm );
     }
 
     .page-title {
@@ -29,12 +28,11 @@
 
     .content-container {
         height: calc( $container-height - $nav-height-md );
+        overflow-y: hidden;
     }
 
-    .main-content {
-        height: inherit;
-        flex-direction: row;
-        justify-content: space-between;
+    .section-content {
+        height: calc( 100% - $nav-height-md );
     }
 
     .page-title {

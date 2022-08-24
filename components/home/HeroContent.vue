@@ -1,5 +1,5 @@
 <template>
-    <div class="left-hero section-side">
+    <div class="hero-content section-content">
         <p>il tuo amichevole <span>web developer</span> di quartiere</p>
     </div>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.left-hero {
+.hero-content {
     justify-content: flex-end;
 
     p {
