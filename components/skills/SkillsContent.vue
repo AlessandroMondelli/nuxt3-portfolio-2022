@@ -4,7 +4,7 @@
             <SkillsImg @return-value="getSkillTypeChoose" />
             <div class="skill-list-fix"> 
                 <Transition name="fade-left">
-                    <SkillsList v-if="skillChoose" :key="skillChange" :skillType="skillChoose" :skillsList="skillChoose =='soft' ? softSkills : hardSkills" />
+                    <SkillsList :key="skillChange" :skillType="skillChoose" :skillsList="skillChoose =='soft' ? softSkills : hardSkills" />
                 </Transition>
             </div>
             

@@ -12,7 +12,6 @@ export default {
 
 <style scoped lang="scss">
 .section-header {
-    position: relative;
-    top: 2rem;
+    margin-top: 2rem;
 }
 </style>

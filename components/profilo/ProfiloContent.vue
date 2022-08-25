@@ -22,11 +22,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.section-content {
-    justify-content: center;
+@media screen and (min-width: $mobile) {
+    .section-content {
+        
+        p {
+            margin-bottom: $profilo-text-margin;
+        }
+    }
+}
 
-    p {
-        margin-bottom: $profilo-text-margin;
+@media screen and (min-width: $tablet) {
+    .section-content {
+        justify-content: center;
     }
 }
 </style>
