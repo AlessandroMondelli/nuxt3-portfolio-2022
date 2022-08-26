@@ -1,12 +1,16 @@
 //Colors
 $first-color: #1E3163;
-$variant-first-color: #2D46B9;
-$second-color: #00FFAB;
+$variant-first-color: #2D46B9; 
+$second-color: #00FFAB; 
 $font-color: #FFF;
 $a-color: #FFF;
 
 $skills-img-soft-color: #edfa31;
 $skills-img-hard-color: #a81914;
+
+//Margins
+$min-margin: 2rem;
+$mid-margin: 5rem;
 
 //Nav
 $nav-height-sm: 12vh;
@@ -16,9 +20,9 @@ $nav-height-lg: 8vh;
 //Container
 $container-height: 100vh;
 
-$container-width-sm: 95%;
-$container-width-md: 85%;
-$container-width-lg: 80%;
+$container-width-sm: 85%;
+$container-width-md: 80%;
+$container-width-lg: 75%;
 
 //Text
 $hero-h1-size: 48px;
@@ -37,6 +41,10 @@ $skills-bulbs-width: 100px;
 
 $skills-bulb-light-top: 150px;
 $skills-bulb-light-left: 45%;
+
+//Projects
+$progetti-langs-size-sm: 14px;
+$progetti-langs-size-md: 16px;
 
 //Breakpoints
 $mobile: 320px;

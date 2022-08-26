@@ -24,7 +24,6 @@ export default {
 <style scoped lang="scss">
 @media screen and (min-width: $mobile) {
     .section-content {
-        
         p {
             margin-bottom: $profilo-text-margin;
         }

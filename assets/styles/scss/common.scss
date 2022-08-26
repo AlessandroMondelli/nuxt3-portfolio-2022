@@ -13,6 +13,19 @@ a {
     }
 }
 
+
+.el-link {
+    transition: all 0.3s ease;
+    
+    &:hover, &.active {
+        color: $second-color;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 .main-content {
     height: inherit;
 }

@@ -104,13 +104,13 @@ export default {
 @media screen and (min-width: $mobile) {
     .skill-list-wrap {
         flex-direction: column;
-        padding: 2rem;
+        padding: $min-margin;
     }
 }
 
 @media screen and (min-width: $tablet) {
     .section-content {
-        margin-top: 5rem;
+        margin-top: $mid-margin;
         .skill-list-wrap {
                 flex-direction: row;
                 margin-top: 0;

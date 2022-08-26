@@ -79,7 +79,7 @@ export default {
 
 @media screen and (min-width: $tablet) {
     .skill-img-wrap {
-        margin: 2rem 0 0 0;
+        margin: $min-margin 0 0 0;
 
         &::after {
             top: $skills-bulb-light-top;
