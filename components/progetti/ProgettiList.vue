@@ -21,6 +21,7 @@ export default {
 @media screen and (min-width: $mobile) {
     .progetti-list {
         list-style-type: none;
+        min-height: 185px;
         
         .progetti-list-el {
             margin-bottom: ($min-margin - 1rem);

@@ -1,7 +1,7 @@
 <template>
   <div class="progetti-lang-wrap">
         <ul class="progetti-langs" >
-            <li class="progetti-lang el-link" v-for="(projectData, index) in projects" :key="index" @click="returnValue(projectData.projectLang, index)" :class="{ 'active': activeLang == index }">{{ projectData.projectLang }}</li>
+            <li class="progetti-lang el-link" v-for="(projectData, index) in projects" :key="index" @click="returnValue(projectData.projectLang, index)" :class="{ 'active': activeLang === index }">{{ projectData.projectLang }}</li>
         </ul>
     </div>
 </template>
