@@ -1,6 +1,6 @@
 <template>
     <section id="progetti-section" class="progetti-wrap content-container">
-        <div class="container ">
+        <div class="container">
             <CommonHeader :title="'progetti'" />
             <ProgettiContent />
         </div>

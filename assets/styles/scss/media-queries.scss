@@ -29,10 +29,6 @@
         width: $container-width-md;
     }
 
-    .container {
-
-    }
-
     .all-height-content {
         height: calc( 100% - $nav-height-md );
     }
@@ -49,7 +45,6 @@
     }
 
     .container {
-
         overflow-y: hidden;
     }
 }

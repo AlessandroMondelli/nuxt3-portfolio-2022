@@ -34,6 +34,21 @@ a {
     flex-direction: column;
 }
 
+.submit-btn {
+    padding: 0.3rem 0.5rem;
+    border-radius: 10px;
+    background-color: $font-color;
+    border: 0;
+    color: $variant-first-color;
+    transition: all 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $variant-first-color;
+        color: $font-color;
+    }
+}
+
 .fade-left-enter-active, .fade-left-leave-active {
     transition: all 0.8s ease;
     transition-delay: 0.7s;

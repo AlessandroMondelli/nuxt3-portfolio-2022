@@ -1,6 +1,6 @@
 <template>
     <div class="profilo-wrap content-container">
-        <div class="container ">
+        <div class="container">
             <CommonHeader :title="'profilo'" />
             <ProfiloContent />
         </div>

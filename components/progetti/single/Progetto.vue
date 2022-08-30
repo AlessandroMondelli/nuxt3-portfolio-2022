@@ -40,6 +40,13 @@ export default {
     .single-progetto-wrap {
         margin-top: 0;
         margin-left: $min-margin + 2rem;
+        max-width: 60%;
+    }
+}
+
+@media screen and (min-width: $laptop) {
+    .single-progetto-wrap {
+        max-width: 50%;
     }
 }
 </style>

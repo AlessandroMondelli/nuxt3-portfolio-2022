@@ -29,10 +29,6 @@ export default {
 
         .tech-video {
             margin-bottom: 0;
-
-            video {
-                max-width: 60%;
-            }
         }
     }
 }
