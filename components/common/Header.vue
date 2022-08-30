@@ -12,6 +12,6 @@ export default {
 
 <style scoped lang="scss">
 .section-header {
-    margin-top: 2rem;
+    margin-bottom: $min-margin;
 }
 </style>

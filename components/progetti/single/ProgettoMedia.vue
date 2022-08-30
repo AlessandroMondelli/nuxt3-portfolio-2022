@@ -23,4 +23,18 @@ export default {
     }   
 }
 
+@media screen and (min-width: $laptop) {
+    .progetto-media-wrap {
+        text-align: center;
+
+        .tech-video {
+            margin-bottom: 0;
+
+            video {
+                max-width: 60%;
+            }
+        }
+    }
+}
+
 </style>

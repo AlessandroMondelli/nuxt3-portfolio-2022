@@ -29,22 +29,9 @@ a {
     }
 }
 
-.main-content {
-    height: inherit;
-}
-
-.section-content {
+.all-height-content {
     display: flex;
     flex-direction: column;
-}
-
-.right-section {
-    justify-content: flex-start;
-
-    .page-title {
-        font-size: $hero-h1-size;
-        margin-top: 2rem;
-    }
 }
 
 .fade-left-enter-active, .fade-left-leave-active {

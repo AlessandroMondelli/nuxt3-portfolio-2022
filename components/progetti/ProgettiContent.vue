@@ -1,14 +1,12 @@
 <template>
-    <div class="section-content progetti">
-        <div class="progetti-wrap">
-            <ProgettiLang :projects="projects" @return-value="getLang" />
-            <TransitionGroup name="fade-left">
-                <ProgettiList v-if="activeProject === false" :projectsArray="projectsArray" @return-project="getProject" />
-            </TransitionGroup>
-            <Transition name="fade-left">
-                <ProgettiSingleProgetto v-if="activeProject" :activeProject="activeProject.content" @closeProj="closeProj" />
-            </Transition>
-        </div>
+    <div class="progetti-wrap">
+        <ProgettiLang :projects="projects" :activeProject="activeProject" @return-value="getLang" />
+        <Transition name="fade-left">
+            <ProgettiList v-if="singleProjectClosed === true" :projectsArray="projectsArray" :key="clickedLang" @return-project="getProject" />
+        </Transition>
+        <Transition name="fade-left">
+            <ProgettiSingleProgetto v-if="activeProject" :activeProject="activeProject.content" @closeProj="closeProj" />
+        </Transition>
     </div>
 </template>
 
@@ -202,6 +200,8 @@ export default {
             ],
             projectsArray: '',
             activeProject: false,
+            singleProjectClosed: true,
+            clickedLang: 0,
         }
     },
     methods: {
@@ -209,14 +209,21 @@ export default {
             for( var i = 0; i < this.projects.length; i++ ) {
                 if( this.projects[i].projectLang == e ) {
                     this.projectsArray = this.projects[i].projectsList;
+                    this.clickedLang++;
                 }
             }
         },
         getProject( e ) {
-            this.activeProject = e;
+            this.singleProjectClosed = false;
+            setTimeout( () => {
+                this.activeProject = e;
+            }, 500 );
         },
         closeProj() {
             this.activeProject = false;
+            setTimeout( () => {
+                this.singleProjectClosed = true;
+            }, 500 ) 
         } 
     }
 }
@@ -224,15 +231,16 @@ export default {
 
 <style scoped lang="scss">
 @media screen and (min-width: $tablet) {
-    .section-content {
-        justify-content: center;
+    .progetti-wrap {
+        display: flex;
+        flex-direction: row;
+    }
+}
 
-        .progetti-wrap {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
+@media screen and (min-width: $laptop) {
+    .progetti-wrap {
+        height: inherit;
+        margin-top: $min-margin + 10rem;
     }
 }
 </style>

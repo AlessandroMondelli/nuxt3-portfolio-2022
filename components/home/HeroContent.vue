@@ -1,5 +1,5 @@
 <template>
-    <div class="hero-content section-content">
+    <div class="hero-content all-height-content">
         <p>il tuo amichevole <span>web developer</span> di quartiere</p>
     </div>
 </template>

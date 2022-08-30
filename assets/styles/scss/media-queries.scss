@@ -1,17 +1,20 @@
 //Media queries
 @media screen and ( min-width: $mobile ) {
-    .container {
-        width: $container-width-sm;
+    .container, .nav-container {
         margin: 0 auto;
+        width: $container-width-sm;
+    }
+
+    .container {
+        height: 100vh;
+        padding: $min-margin 0;
     }
 
     .content-container {
-        height: calc( $container-height - $nav-height-sm );
         overflow-y: auto;
-        overflow-x: hidden;
     }
 
-    .section-content {
+    .all-height-content {
         height: calc( 100% - $nav-height-sm );
     }
 
@@ -21,17 +24,16 @@
 }
 
 @media screen and ( min-width: $tablet ) {
-    .container {
-        width: $container-width-md;
+    .container, .nav-container {
         margin: 0 auto;
+        width: $container-width-md;
     }
 
-    .content-container {
-        height: calc( $container-height - $nav-height-md );
-        overflow-y: hidden;
+    .container {
+
     }
 
-    .section-content {
+    .all-height-content {
         height: calc( 100% - $nav-height-md );
     }
 
@@ -41,12 +43,13 @@
 }
 
 @media screen and ( min-width: $laptop ) {
-    .container {
-        width: $container-width-lg;
+    .container, .nav-container {
         margin: 0 auto;
+        width: $container-width-lg;
     }
 
-    .content-container {
-        height: calc( $container-height - $nav-height-lg );
+    .container {
+
+        overflow-y: hidden;
     }
 }

@@ -1,14 +1,14 @@
 <template>
   <div class="progetti-lang-wrap">
-        <ul class="progetti-langs" >
-            <li class="progetti-lang el-link" v-for="(projectData, index) in projects" :key="index" @click="returnValue(projectData.projectLang, index)" :class="{ 'active': activeLang === index }">{{ projectData.projectLang }}</li>
+        <ul class="progetti-langs">
+            <li class="progetti-lang el-link" v-for="(projectData, index) in projects" :key="index" @click="returnValue(projectData.projectLang, index)" :class="{ 'active': activeLang === index, 'project-active': activeProject !== false }">{{ projectData.projectLang }}</li>
         </ul>
     </div>
 </template>
 
 <script>
 export default {
-    props: [ 'projects' ],
+    props: [ 'projects', 'activeProject' ],
     data() {
         return {
             activeLang: '',
@@ -33,6 +33,10 @@ export default {
         .progetti-lang {
             display: inline-block;
             font-size: $progetti-langs-size-sm;
+
+            &.project-active {
+                pointer-events: none;
+            }
             
             &:not(:last-child) {
                 margin-right: ( $min-margin - 0.5rem );
@@ -50,7 +54,7 @@ export default {
                 margin-bottom: $min-margin;
                 font-size: $progetti-langs-size-md;
                 position: relative;
-                width: 70%;
+                width: 12rem;
 
                 &:after {
                     content: '>';
@@ -72,6 +76,12 @@ export default {
                 }
             }
         }
+    }
+}
+
+@media screen and (min-width: $laptop) { 
+    .progetti-lang-wrap {
+        width: 35%;
     }
 
 }

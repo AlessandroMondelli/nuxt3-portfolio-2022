@@ -1,6 +1,6 @@
 <template>
     <div class="nav-wrap">
-        <nav class="main-nav container">
+        <nav class="main-nav nav-container">
             <NavLeftMenu />
             <NavRightMenu />
         </nav>
@@ -12,6 +12,10 @@
     .nav-wrap {
         background-color: $second-color;
         color: $font-color;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
 
         .main-nav {
             display: flex;

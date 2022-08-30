@@ -1,6 +1,6 @@
 <template>
     <div class="hero-wrap content-container">
-        <div class="container main-content">
+        <div class="container">
             <CommonHeader :title="'amdev'" />
             <HomeHeroContent />
         </div>

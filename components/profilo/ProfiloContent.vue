@@ -1,5 +1,5 @@
 <template>
-    <div class="section-content profilo-info">
+    <div class="profilo-info all-height-content">
         <p>
             Ciao! Sono Alessandro, classe '98 e sviluppatore Web che ama il settore IT e imparare ogni giorno qualcosa di nuovo.
         </p>
@@ -23,7 +23,7 @@ export default {
 
 <style scoped lang="scss">
 @media screen and (min-width: $mobile) {
-    .section-content {
+    .all-height-content {
         p {
             margin-bottom: $profilo-text-margin;
         }
@@ -31,7 +31,7 @@ export default {
 }
 
 @media screen and (min-width: $tablet) {
-    .section-content {
+    .all-height-content {
         justify-content: center;
     }
 }

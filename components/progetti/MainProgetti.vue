@@ -1,10 +1,10 @@
 <template>
-    <div class="progetti-wrap content-container">
-        <div class="container main-content">
+    <section id="progetti-section" class="progetti-wrap content-container">
+        <div class="container ">
             <CommonHeader :title="'progetti'" />
             <ProgettiContent />
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-    <div class="section-content">
+    <div class="all-height-content">
         <div class="skill-list-wrap">
             <SkillsImg @return-value="getSkillTypeChoose" />
             <div class="skill-list-fix"> 
@@ -77,7 +77,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.section-content {
+.all-height-content {
 
     .skill-list-wrap {
         display: flex;
@@ -109,7 +109,7 @@ export default {
 }
 
 @media screen and (min-width: $tablet) {
-    .section-content {
+    .all-height-content {
         margin-top: $mid-margin;
         .skill-list-wrap {
                 flex-direction: row;

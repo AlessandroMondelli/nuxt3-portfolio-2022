@@ -1,10 +1,10 @@
 <template>
-    <div class="skills-wrap content-container">
-        <div class="container main-content">
+    <section id="skills-section" class="skills-wrap content-container">
+        <div class="container">
             <CommonHeader :title="'skills'" />
             <SkillsContent />
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

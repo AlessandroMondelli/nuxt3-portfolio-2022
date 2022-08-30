@@ -1,7 +1,7 @@
 <template>
     <div class="single-progetto-wrap">
         <div class="active-project">
-            <div class="close-project" @click="closeProj">X</div>
+            <CommonCloseTab @click="closeProj" />
             <ProgettiSingleProgettoLang :activeProject="activeProject" />
             <ProgettiSingleProgettoDescription :activeProject="activeProject" />
             <ProgettiSingleProgettoMedia v-if="activeProject.media != ''" :activeProject="activeProject" />
@@ -33,6 +33,13 @@ export default {
         .privacy-warn {
             margin-bottom: $min-margin;
         }
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .single-progetto-wrap {
+        margin-top: 0;
+        margin-left: $min-margin + 2rem;
     }
 }
 </style>
