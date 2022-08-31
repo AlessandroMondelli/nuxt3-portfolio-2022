@@ -23,6 +23,7 @@ $container-height: 100vh;
 $container-width-sm: 85%;
 $container-width-md: 80%;
 $container-width-lg: 75%;
+$container-width-xl: 65%;
 
 //Text
 $hero-h1-size: 48px;
@@ -49,4 +50,5 @@ $progetti-langs-size-md: 16px;
 //Breakpoints
 $mobile: 320px;
 $tablet: 768px;
-$laptop: 1100px;
+$laptop: 1024px;
+$xl: 1200px;

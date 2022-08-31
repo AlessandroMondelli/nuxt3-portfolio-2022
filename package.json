@@ -12,6 +12,7 @@
     "sass-loader": "^13.0.2"
   },
   "dependencies": {
+    "firebase": "^9.9.3",
     "sass": "^1.54.5"
   }
 }

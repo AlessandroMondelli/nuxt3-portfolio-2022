@@ -15,7 +15,7 @@ export default {
 <style scoped lang="scss">
 .mobile-menu-wrap {
     position: absolute;
-    bottom: 4rem;
+    bottom: 4.5rem;
     right: 0.5rem;
 
     .mobile-menu {

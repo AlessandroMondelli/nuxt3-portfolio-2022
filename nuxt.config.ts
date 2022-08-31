@@ -21,4 +21,11 @@ export default defineNuxtConfig({
             },
         },
     },
+
+    runtimeConfig: { 
+        public: {
+            FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
+            FIREBASE_URL: process.env.FIREBASE_URL,
+        }
+    }
 })

@@ -25,7 +25,6 @@
 
 @media screen and ( min-width: $tablet ) {
     .container, .nav-container {
-        margin: 0 auto;
         width: $container-width-md;
     }
 
@@ -40,11 +39,16 @@
 
 @media screen and ( min-width: $laptop ) {
     .container, .nav-container {
-        margin: 0 auto;
         width: $container-width-lg;
     }
 
     .container {
         overflow-y: hidden;
+    }
+}
+
+@media screen and ( min-width: $xl ) {
+    .container, .nav-container {
+        width: $container-width-xl;
     }
 }

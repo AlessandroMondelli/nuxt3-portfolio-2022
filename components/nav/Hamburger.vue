@@ -5,7 +5,7 @@
             <span class="line line2"></span>
             <span class="line line3"></span>
         </div>
-        <Transition name="fade-up">
+        <Transition name="fade-down-menu">
             <NavMobileMenu :menuList="menuList" v-if="isActive" />
         </Transition>
         
@@ -68,16 +68,16 @@ export default {
         }
     }
 
-    .fade-up-enter-active,
-    .fade-up-leave-active {
+    .fade-down-menu-enter-active,
+    .fade-down-menu-leave-active {
     transition: all 0.8s ease;
     opacity: 1;
     position: absolute;
-    bottom: 4rem;
+    bottom: 4.5rem;
     }
 
-    .fade-up-enter-from,
-    .fade-up-leave-to {
+    .fade-down-menu-enter-from,
+    .fade-down-menu-leave-to {
     opacity: 0;
     position: absolute;
     bottom: 8rem;
