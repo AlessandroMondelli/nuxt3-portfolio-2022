@@ -1,5 +1,6 @@
 <template>
     <div class="contatti-content-wrap">
+        <ContattiHero />
         <ContattiForm />
     </div>
 </template>
@@ -10,7 +11,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.contatti-content-wrap {
-    margin-top: $min-margin;
+@media screen and (min-width: $tablet) {
+    .contatti-content-wrap {
+        margin-top: $min-margin;
+        display: flex;
+        justify-content: space-between;
+    }
 }
+
 </style>

@@ -1,19 +1,21 @@
 <template>
     <div class="contatti-form-wrap">
-        <form @submit.prevent="sendForm">
-            <div class="fields-row">
-                <CommonTextFormField label="Nome" name="nome" type="text" :value="userData.nome" @return-value="getValue" />
-                <CommonTextFormField label="Cognome" name="cognome" type="text" :value="userData.cognome" @return-value="getValue" />
-            </div>
-            <div class="fields-row">
-                <CommonTextFormField label="Email" name="email" type="email" :value="userData.email" @return-value="getValue" />
-                <CommonTextFormField label="Messaggio" name="messaggio" type="textarea" :value="userData.messaggio" @return-value="getValue" />
-            </div>
-            <button class="submit-btn" type="submit">Invia messaggio</button>
-        </form>
-        <Transition name="fade-up">
-            <p class="form-error text-small" v-if="formError">I campi non possono essere vuoti, riprova.</p>
-        </Transition>
+        <div class="contatti-form">
+            <form @submit.prevent="sendForm">
+                <div class="fields-row">
+                    <CommonTextFormField label="Nome" name="nome" type="text" :value="userData.nome" @return-value="getValue" />
+                    <CommonTextFormField label="Cognome" name="cognome" type="text" :value="userData.cognome" @return-value="getValue" />
+                </div>
+                <div class="fields-row">
+                    <CommonTextFormField label="Email" name="email" type="email" :value="userData.email" @return-value="getValue" />
+                    <CommonTextFormField label="Messaggio" name="messaggio" type="textarea" :value="userData.messaggio" @return-value="getValue" />
+                </div>
+                <button class="submit-btn" type="submit">Invia messaggio</button>
+            </form>
+            <Transition name="fade-up">
+                <p class="form-error text-small" v-if="formError">I campi non possono essere vuoti, riprova.</p>
+            </Transition>
+        </div>
     </div> 
 </template>
 
@@ -83,7 +85,8 @@ export default {
 <style scoped lang="scss">
 .contatti-form-wrap {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    width: 55%;
     
     .form-error {
         margin-top: $min-margin - 1rem;

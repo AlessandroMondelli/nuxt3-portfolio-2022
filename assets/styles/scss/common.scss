@@ -78,3 +78,19 @@ a {
     position: relative;
     top: 10px;
 }
+
+//Animations
+
+.writing-cursor {
+    animation: cursor;
+    animation-duration: 1.2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cursor {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
