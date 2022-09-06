@@ -1,5 +1,5 @@
 <template>
-    <section id="contatti-section" class="contatti-wrap content-container">
+    <section id="contatti-section" class="contatti-wrap">
         <div class="container">  
             <CommonHeader :title="'contatti'" />
             <ContattiContent />

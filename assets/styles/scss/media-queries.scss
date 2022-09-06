@@ -6,12 +6,8 @@
     }
 
     .container {
-        height: 100vh;
+        height: 100vh - $nav-height-sm;
         padding: $min-margin 0;
-    }
-
-    .content-container {
-        overflow-y: auto;
     }
 
     .all-height-content {
@@ -26,6 +22,10 @@
 @media screen and ( min-width: $tablet ) {
     .container, .nav-container {
         width: $container-width-md;
+    }
+    
+    .container {
+        height: 100vh - $nav-height-md;
     }
 
     .all-height-content {
@@ -43,7 +43,7 @@
     }
 
     .container {
-        overflow-y: hidden;
+        height: 100vh - $nav-height-lg;
     }
 }
 

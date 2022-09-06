@@ -12,7 +12,7 @@
     .nav-wrap {
         background-color: $second-color;
         color: $font-color;
-        position: fixed;
+        
         bottom: 0;
         left: 0;
         right: 0;

@@ -1,17 +1,19 @@
 <template>
     <div class="contatti-form-wrap">
         <div class="contatti-form">
-            <form @submit.prevent="sendForm">
-                <div class="fields-row">
-                    <CommonTextFormField label="Nome" name="nome" type="text" :value="userData.nome" @return-value="getValue" />
-                    <CommonTextFormField label="Cognome" name="cognome" type="text" :value="userData.cognome" @return-value="getValue" />
-                </div>
-                <div class="fields-row">
-                    <CommonTextFormField label="Email" name="email" type="email" :value="userData.email" @return-value="getValue" />
-                    <CommonTextFormField label="Messaggio" name="messaggio" type="textarea" :value="userData.messaggio" @return-value="getValue" />
-                </div>
-                <button class="submit-btn" type="submit">Invia messaggio</button>
-            </form>
+            <Transition name="fade">
+                <form v-if="!formSent" @submit.prevent="sendForm">
+                    <div class="fields-row">
+                        <CommonTextFormField label="Nome" name="nome" type="text" :value="userData.nome" @return-value="getValue" />
+                        <CommonTextFormField label="Cognome" name="cognome" type="text" :value="userData.cognome" @return-value="getValue" />
+                    </div>
+                    <div class="fields-row">
+                        <CommonTextFormField label="Email" name="email" type="email" :value="userData.email" @return-value="getValue" />
+                        <CommonTextFormField label="Messaggio" name="messaggio" type="textarea" :value="userData.messaggio" @return-value="getValue" />
+                    </div>
+                    <button class="submit-btn" type="submit">Invia messaggio</button>
+                </form>
+            </Transition>
             <Transition name="fade-up">
                 <p class="form-error text-small" v-if="formError">I campi non possono essere vuoti, riprova.</p>
             </Transition>
@@ -31,13 +33,14 @@ export default {
                 email: '',
                 messaggio: '',
             },
-            formError: false
+            formError: false,
+            formSent: false,
         }
     },
     methods: {
         getValue(...e) { //Prendo valori da $emit
             const formValue = e[0]; //recupero name
-            const dataArray = Object.keys(this.$data.userData); //trasforma data in array
+            const dataArray = Object.keys(this.userData); //trasforma data in array
 
             for( var i = 0; i < dataArray.length; i++ ) { //Itero key di data
                 if( dataArray[i] === formValue ) { //Se trovo corrispondenza
@@ -48,7 +51,7 @@ export default {
         sendForm() { //Invio form
             const realtimeDatabase = getDatabase(); //Prendo database firebase
             const timestamp = new Date(); //Salvo in variabile timestamp
-            const data = Object.values(this.$data.userData); //trasformo data in array
+            const data = Object.values(this.userData); //trasformo data in array
 
             let flag = false; //flag errore
             let i = 0; //contatore
@@ -60,7 +63,7 @@ export default {
                 }
 
                 i++;
-            } while( i < data.length || flag == false );
+            } while( i < data.length && flag == false );
 
             if( !flag ) { //Se non sono stati trovati errori
                 update(ref(realtimeDatabase, 'contatti/' + timestamp ), {
@@ -75,6 +78,13 @@ export default {
                     this.userData.cognome = '';
                     this.userData.email = '';
                     this.userData.messaggio = '';
+
+                    this.formSent = true;
+
+                    if( this.formError )
+                        this.formError = false
+                        
+                    this.$emit( 'form-sent', this.formSent ); //Invio notifica di invio
                 });
             } 
         }
@@ -83,13 +93,21 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.contatti-form-wrap {
+
+@media screen and (min-width: $tablet) {
+    .contatti-form-wrap {
     display: flex;
     justify-content: flex-end;
-    width: 55%;
-    
-    .form-error {
-        margin-top: $min-margin - 1rem;
-    }
+    width: 60%;
+
+        .contatti-form {
+            width: 35%;
+
+            .form-error {
+                margin-top: $min-margin - 1rem;
+            }
+        }   
+    }   
 }
+
 </style>

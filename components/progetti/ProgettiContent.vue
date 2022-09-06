@@ -239,8 +239,7 @@ export default {
 
 @media screen and (min-width: $laptop) {
     .progetti-wrap {
-        height: inherit;
-        margin-top: $min-margin + 10rem;
+        margin-top: $min-margin + 8rem;
     }
 }
 </style>
