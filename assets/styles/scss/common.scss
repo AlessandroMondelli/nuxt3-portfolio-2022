@@ -55,7 +55,7 @@ a {
 
 //Scrollbar
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -111,7 +111,7 @@ a {
 //Animations
 
 .writing-cursor {
-    animation: cursor;
+    animation-name: cursor;
     animation-duration: 1.2s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
@@ -123,3 +123,66 @@ a {
     50% { opacity: 0; }
     100% { opacity: 1; }
 }
+
+.float-img {
+    position: relative;
+    animation-name: move;
+    animation-duration: 2.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    0%, 100% {
+        top: 0;
+    }
+
+    50% {
+        top: 15px;
+    }
+}
+
+.page-enter-active {
+    transition: all 10s ease-out;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0; 
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+    }
+  }
+  .page-leave-active {
+    transition: all 10s cubic-bezier(1, 0.5, 0.8, 1);
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0; 
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+    }
+  }
+  .page-enter-from,
+  .page-leave-to {
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0; 
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+    }
+  }

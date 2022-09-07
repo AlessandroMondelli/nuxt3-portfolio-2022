@@ -93,7 +93,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 @media screen and (min-width: $tablet) {
     .contatti-form-wrap {
     display: flex;
@@ -102,6 +101,7 @@ export default {
 
         .contatti-form {
             width: 35%;
+            margin: auto 0;
 
             .form-error {
                 margin-top: $min-margin - 1rem;

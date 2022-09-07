@@ -52,9 +52,9 @@ export default {
             transition: 0.3s ease;
         }
 
-        input:focus {
-            border: 1px solid #00FFAB;
-            box-shadow: inset 0px 0px 8px 2px #00FFAB;
+        input:focus, textarea:focus {
+            border: 1px solid $second-color;
+            box-shadow: inset 0px 0px 8px 2px $second-color;
             outline: none;
         }
 

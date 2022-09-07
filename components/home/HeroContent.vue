@@ -16,7 +16,6 @@ export default {
 
     p {
         font-size: $hero-p-size;
-        margin-bottom: 2rem;
 
         span {
             color: $second-color;

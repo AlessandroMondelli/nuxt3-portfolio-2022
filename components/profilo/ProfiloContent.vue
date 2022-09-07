@@ -1,17 +1,10 @@
 <template>
-    <div class="profilo-info all-height-content">
-        <p>
-            Ciao! Sono Alessandro, classe '98 e sviluppatore Web che ama il settore IT e imparare ogni giorno qualcosa di nuovo.
-        </p>
-        <p>
-            Ho studiato informatica per 5 anni all'istituto I.T.T Montani di Fermo e migliorato le mie capacità nel campo dello sviluppo web grazie al corso intensivo di 700 ore di Boolean Careers.
-        </p>
-        <p>
-            Lavoro dal 2020 nel settore del web development, principalmente da remoto e sono sempre in cerca di nuove sfide che mi migliorino e che mi stimolino a dare il meglio.
-        </p>
-        <p>
-            Nel tempo libero amo giocare ai videogiochi, leggere e studiare nuove tecnologie.
-        </p>
+    <div class="profilo-info">
+        <div class="profilo-content">
+            <ProfiloLeft />
+            <div class="divider"></div>
+            <ProfiloRight />
+        </div>
     </div>
 </template>
 
@@ -22,17 +15,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@media screen and (min-width: $mobile) {
-    .all-height-content {
-        p {
-            margin-bottom: $profilo-text-margin;
-        }
-    }
-}
-
 @media screen and (min-width: $tablet) {
-    .all-height-content {
-        justify-content: center;
-    }
+    .profilo-content {
+        display: flex;
+        justify-content: space-between;
+
+        .divider {
+            height: 15rem;
+            margin: auto 0;
+            width: 2px;
+            background-color: #FFF;
+            border-radius: 25px;
+        }
+    }   
 }
 </style>

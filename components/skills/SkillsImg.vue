@@ -1,12 +1,15 @@
 <template>
     <div class="skill-img-wrap" :class="softChoose">
         <div class="float-img">
-            <img src="@/assets/images/light-bulb-white-l.png" alt="light bulb soft skills" @click="returnValue('soft')" class="soft-skills-img">
+            <img src="@/assets/images/light-bulb-white-l.png" alt="light bulb soft skills" @click="returnValue('soft')" class="soft-skills-img" :class="{ 'active' : softChoose == 'soft' }">
+            <div class="arrow">
+                <p>Clicca la lampadina per scoprire le skills</p>
+                <img class="img-arrow" src="@/assets/images/handwritten_arrow.png" alt="freccia disegnata a mano" />
+            </div>
         </div>
-        <div class="float-img">
-            <img src="@/assets/images/light-bulb-white-r.png" alt="light bulb hard skills" @click="returnValue('hard')" class="hard-skills-img">   
+        <div class="float-img magnet-el">
+            <img src="@/assets/images/light-bulb-white-r.png" alt="light bulb hard skills" @click="returnValue('hard')" class="hard-skills-img" :class="{ 'active' : softChoose == 'hard' }">   
         </div>
-        
     </div>
 </template>
 
@@ -23,7 +26,7 @@ export default {
                 this.softChoose = softChooseState;
                 this.$emit( 'return-value', softChooseState );
             }
-        }
+        },
     }
 }
 </script>
@@ -61,16 +64,36 @@ export default {
                 0 0 60px 20px #fff,
                 0 0 100px 50px $skills-img-hard-color, 
         }
-        
+
         .float-img {
             float: left;
             width: $skills-bulbs-float-width-sm;
-        
+
             img {
                 width: $skills-bulbs-width;
+                transition: all 0.5s ease;
 
                 &:hover {
                     cursor: pointer;
+                }
+
+                &.active {
+                    width: $skills-bulbs-width + 10px;
+                }
+            }
+
+            .arrow {
+                position: relative;
+
+                p {
+                    position: absolute;
+                    right: 150%;
+                }
+
+                img {
+                    position: absolute;
+                    right: 75%;
+                    bottom: 100%;
                 }
             }
         }
@@ -87,7 +110,7 @@ export default {
         }
 
         .float-img {
-                width: $skills-bulbs-float-width-md;
+            width: $skills-bulbs-float-width-md;
         }
     }
 }

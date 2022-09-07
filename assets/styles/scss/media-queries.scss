@@ -5,6 +5,10 @@
         width: $container-width-sm;
     }
 
+    .content-container {
+        overflow-y: auto;
+    }
+
     .container {
         height: 100vh - $nav-height-sm;
         padding: $min-margin 0;

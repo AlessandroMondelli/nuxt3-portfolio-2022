@@ -12,7 +12,6 @@
     .nav-wrap {
         background-color: $second-color;
         color: $font-color;
-        
         bottom: 0;
         left: 0;
         right: 0;
@@ -29,6 +28,7 @@
 
 @media screen and (min-width: $tablet) {
     .nav-wrap {
+        z-index: 9;
         .main-nav {
             height: $nav-height-md;
         }
