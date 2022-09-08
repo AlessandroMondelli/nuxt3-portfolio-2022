@@ -143,46 +143,66 @@ a {
 }
 
 .page-enter-active {
-    transition: all 10s ease-out;
+    transition: all 2s;
 
-    &::after {
+    & .content-container::after {
         content: '';
+        background: linear-gradient(270deg, #17ffc3, #223060);
+        background-size: 400% 400%;
+        animation: gradientAnimationExit 2s ease forwards;
         position: absolute;
         left: 0;
         right: 0;
         top: 0; 
         bottom: 0;
         width: 100vw;
-        height: 100vh;
-        background-color: black;
     }
-  }
-  .page-leave-active {
-    transition: all 10s cubic-bezier(1, 0.5, 0.8, 1);
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0; 
-        bottom: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: black;
-    }
-  }
-  .page-enter-from,
-  .page-leave-to {
 
-    &::after {
+    & .container {
+        animation: containerShow 4s ease forwards;
+    }
+}
+
+.page-leave-active {
+    transition: all 2s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.page-enter-from,
+.page-leave-to {
+
+    & .content-container::after {
         content: '';
+        background: linear-gradient(270deg, #17ffc3, #223060);
+        background-size: 400% 400%;
+        animation: gradientAnimation 2s ease infinite; 
         position: absolute;
+        transition: all 0.5s;
         left: 0;
         right: 0;
         top: 0; 
         bottom: 0;
         width: 100vw;
-        height: 100vh;
-        background-color: black;
     }
-  }
+
+    & .container {
+        opacity: 0;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {opacity: 0; background-position: 0% 50% }
+    10% { opacity: 1 }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+
+@keyframes gradientAnimationExit {
+    0% {opacity: 1; background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { opacity: 0; background-position: 0% 50% }
+}
+
+@keyframes containerShow {
+    from { opacity: 0; }
+    to {  opacity: 1; }
+}

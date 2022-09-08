@@ -21,6 +21,21 @@
     .page-title {
         margin-bottom: 2rem;
     }
+
+    .page-enter-active {
+    
+        & .content-container::after {
+            height: 100vh - $nav-height-sm;
+        }
+    }
+
+    .page-enter-from,
+    .page-leave-to {
+
+        & .content-container::after {
+            height: 100vh - $nav-height-sm;
+        }
+    }
 }
 
 @media screen and ( min-width: $tablet ) {
@@ -39,6 +54,21 @@
     .page-title {
         margin-bottom: 0;
     }
+    
+    .page-enter-active {
+    
+        & .content-container::after {
+            height: 100vh - $nav-height-md;
+        }
+    }
+
+    .page-enter-from,
+    .page-leave-to {
+
+        & .content-container::after {
+            height: 100vh - $nav-height-md;
+        }
+    }
 }
 
 @media screen and ( min-width: $laptop ) {
@@ -48,6 +78,21 @@
 
     .container {
         height: 100vh - $nav-height-lg;
+    }
+
+    .page-enter-active {
+    
+        & .content-container::after {
+            height: 100vh - $nav-height-lg;
+        }
+    }
+
+    .page-enter-from,
+    .page-leave-to {
+
+        & .content-container::after {
+            height: 100vh - $nav-height-lg;
+        }
     }
 }
 

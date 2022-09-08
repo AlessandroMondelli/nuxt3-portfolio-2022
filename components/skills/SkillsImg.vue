@@ -3,8 +3,9 @@
         <div class="float-img">
             <img src="@/assets/images/light-bulb-white-l.png" alt="light bulb soft skills" @click="returnValue('soft')" class="soft-skills-img" :class="{ 'active' : softChoose == 'soft' }">
             <div class="arrow">
-                <p>Clicca la lampadina per scoprire le skills</p>
+                
                 <img class="img-arrow" src="@/assets/images/handwritten_arrow.png" alt="freccia disegnata a mano" />
+                <p>Clicca la lampadina per scoprire le skills</p>
             </div>
         </div>
         <div class="float-img magnet-el">
@@ -82,20 +83,6 @@ export default {
                 }
             }
 
-            .arrow {
-                position: relative;
-
-                p {
-                    position: absolute;
-                    right: 150%;
-                }
-
-                img {
-                    position: absolute;
-                    right: 75%;
-                    bottom: 100%;
-                }
-            }
         }
     }
 }
@@ -103,6 +90,7 @@ export default {
 @media screen and (min-width: $tablet) {
     .skill-img-wrap {
         margin: $min-margin 0 0 0;
+        width: 45%;
 
         &::after {
             top: $skills-bulb-light-top;
@@ -111,6 +99,28 @@ export default {
 
         .float-img {
             width: $skills-bulbs-float-width-md;
+        }
+    }
+}
+
+@media screen and (min-width: $laptop) {
+    .skill-img-wrap {
+        margin: $min-margin 0 0 0;
+        width: 25%;
+
+        .arrow {
+            position: relative;
+
+            p {
+                position: absolute;
+                right: 150%;
+            }
+
+            img {
+                position: absolute;
+                right: 75%;
+                bottom: 100%;
+            }
         }
     }
 }

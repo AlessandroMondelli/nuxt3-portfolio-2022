@@ -42,6 +42,7 @@ export default {
         .el-data {
             h3 {
                 margin-bottom: $min-margin - 1.4rem;
+                font-weight: 600;
             }
 
             margin-left: $min-margin - 0.5rem 0;
