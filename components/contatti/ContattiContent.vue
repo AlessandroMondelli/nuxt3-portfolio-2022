@@ -27,7 +27,7 @@ export default {
     .contatti-content-wrap {
         display: flex;
         justify-content: space-between;
-        height: 100%;
+        height: 85%;
     }
 }
 

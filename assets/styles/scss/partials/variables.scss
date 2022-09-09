@@ -11,14 +11,34 @@ $skills-img-hard-color: #a81914;
 $scrollbar-color: rgba(198, 194, 195, 0.4); 
 $scrollbar-color-hover: rgba(198, 194, 195, 0.3);
 
+$page-transition-color1: #223060;
+$page-transition-color2: #17ffc3;
+
+//Transitions
+$common-transition: 0.3s ease;
+
+$page-transition-background-size: 400% 400%;
+
 //Margins
 $min-margin: 2rem;
 $mid-margin: 5rem;
+
+//Radius
+$max-radius: 25px;
 
 //Nav
 $nav-height-sm: 12vh;
 $nav-height-md: 10vh;
 $nav-height-lg: 8vh;
+
+//Hamburger
+$hamburger-width: 32px;
+$hamburger-height: 26px;
+
+$hamburger-line-width: 100%;
+$hamburger-line-height: 4px;
+
+$hamburger-line-radius: 10px;
 
 //Container
 $container-height: 100vh;
@@ -32,8 +52,14 @@ $container-width-xl: 65%;
 $hero-h1-size: 48px;
 $hero-p-size: 20px;
 $hero-span-size: 32px;
+$h1-normal-size: 32px;
+$small-font-size: 12px;
 
+$h2-size: 24px;
+
+$profilo-h3-weight: 600;
 $profilo-text-margin: 1.5rem;
+$profilo-list-size: 14px;
 
 //Skills
 $skills-imgs-size: 20px;

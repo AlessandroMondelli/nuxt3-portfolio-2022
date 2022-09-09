@@ -43,36 +43,26 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .top-image {
-        .image {
-            width: 50px;
-            height: 50px;
-            margin: 0 auto;
-            background-color: #FFF;
-            border-radius: 25px;
+@media screen and (min-width: $mobile) {
+    .profilo-right-section {
+        margin: $min-margin + 2rem 0;
+    }
+}
+
+
+@media screen and (min-width: $tablet) {
+    .profilo-section {
+        width: 35%;
+
+        &.profilo-right-section {
+            margin: 0;
         }
     }
+}
 
-    @media screen and (min-width: $mobile) {
-        .profilo-right-section {
-            margin: $min-margin + 2rem 0;
-        }
+@media screen and (min-width: $xl) {
+    .profilo-section {
+        width: 30%;
     }
-    
-
-    @media screen and (min-width: $tablet) {
-        .profilo-section {
-            width: 35%;
-
-            &.profilo-right-section {
-                margin: 0;
-            }
-        }
-    }
-
-    @media screen and (min-width: $xl) {
-        .profilo-section {
-            width: 30%;
-        }
-    }
+}
 </style>

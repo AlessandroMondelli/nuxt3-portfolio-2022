@@ -1,16 +1,16 @@
 <template>
     <div class="profilo-section profilo-left-section">
         <p>
-            Ciao! Sono Alessandro, sviluppatore Web classe '98, appassionato del settore IT e dall'imparare ogni giorno qualcosa di nuovo.
+            Alessandro è uno sviluppatore Web classe '98, appassionato del settore IT e determinato nel migliorarsi ogni giorno per raggiungere i proprio obiettivi.
         </p>
         <p>
-            Ho studiato informatica per 5 anni all'istituto I.T.T Montani di Fermo e migliorato le mie capacità nel campo dello sviluppo web grazie al corso intensivo di Boolean Careers.
+            Si è diplomato in informatica all'istituto I.T.T Montani di Fermo, per poi decidere di approfondire le conoscenze da Web Developer con il corso intensivo di Boolean Careers.
         </p>
         <p>
-            Lavoro dal 2020 nel settore del web development, principalmente da remoto e sono sempre in cerca di nuove sfide che mi migliorino e che mi stimolino a dare il mio meglio.
+            Inizia, come prima esperienza, una collaborazione nel 2020 come IT e Web Developer presso l'azienda Isegno S.r.l., attiva tutt'oggi.
         </p>
         <p>
-            Nel tempo libero amo giocare ai videogiochi, leggere e studiare nuove tecnologie.
+            Nel tempo libero ama giocare ai videogiochi, leggere e studiare nuove tecnologie.
         </p>
         <div class="linkedin-link">
             <p>Scopri di più su <a href="https://www.linkedin.com/in/alessandro-mondelli-5b15971a1" target="__blank"><i class="fa-brands fa-linkedin"></i></a></p>
@@ -32,9 +32,9 @@ export default {
         }  
 
         .fa-linkedin {
-            font-size: 32px;
+            font-size: $hero-span-size;
             margin-left: $min-margin - 1rem;
-            transition: color 0.3s ease;
+            transition: color $common-transition;
 
             &:hover {
                 color: #0A66C2;

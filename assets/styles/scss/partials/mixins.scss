@@ -1,0 +1,20 @@
+@mixin animationParameters( $name, $duration, $timing-function, $fill-mode, $iterations ) {
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-timing-function: $timing-function;
+    animation-fill-mode: $fill-mode;
+    animation-iteration-count: $iterations;
+}
+
+@mixin positionValues( $position, $top, $right, $bottom, $left ) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin widthHeightEl( $width, $height ) {
+    width: $width;
+    height: $height;
+}

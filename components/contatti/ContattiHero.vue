@@ -17,7 +17,7 @@ export default {
             startMessage: 'Per domande o collaborazioni, non esitare a lasciarmi un messaggio.',
             thankYouMessage: 'Grazie per avermi contattato.',
             thanksOutput: false,
-            speed: 35,
+            speed: 50,
             i: 0,
         }
     },
@@ -72,7 +72,7 @@ export default {
         width: 45%;
 
         .contatti-hero-info {
-            font-size: 32px;
+            font-size: $hero-span-size;
         }
     }
 }

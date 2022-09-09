@@ -18,52 +18,73 @@ export default {
         return {
             skillChoose: '',
             skillChange: false, 
-            softSkills: [ 'Problem Solving', 'Capacità di lavorare in autonomia e in Team' ,'Propenso alla formazione continua', 'Schedule delle task assegnate'],
+            softSkills: [ 'Problem Solving', 'Capacità di adattamento', 'Propenso al lavoro di squadra', 'Propenso alla formazione continua', 'Gestione organizzata delle task', 'Puntualità' ],
             hardSkills: [ 
                 {
                   lang: 'HTML',
-                  icon: 'html5'
+                  icon: 'html5',
+                  perc: '80',
                 },
                 {
                   lang: 'CSS',
-                  icon: 'css'
+                  icon: 'css',
+                  perc: '75',
                 },
                 {
                   lang: 'SCSS',
-                  icon: 'sass'
+                  icon: 'sass',
+                  perc: '70',
                 },
                 {
                   lang: 'JavaScript',
-                  icon: 'javascript'
+                  icon: 'javascript',
+                  perc: '75',
                 },
                 {
                   lang: 'JQuery',
-                  icon: 'jquery'
+                  icon: 'jquery',
+                  perc: '70',
                 },
                 {
                   lang: 'Vue.js',
-                  icon: 'vue'
+                  icon: 'vue',
+                  perc: '70',
                 },
                 {
                   lang: 'Nuxt.js',
-                  icon: 'nuxt'
+                  icon: 'nuxt',
+                  perc: '65',
                 },
                 {
                   lang: 'PHP',
-                  icon: 'php'
+                  icon: 'php',
+                  perc: '70',
                 },
                 {
                   lang: 'MySQL',
-                  icon: 'mysql'
+                  icon: 'mysql',
+                  perc: '65',
                 },
                 {
                   lang: 'Laravel',
-                  icon: 'laravel'
+                  icon: 'laravel',
+                  perc: '60',
                 },
                 {
                   lang: 'Wordpress',
-                  icon: 'wordpress'
+                  icon: 'wordpress',
+                  perc: '75',
                 },
+                {
+                  lang: 'Google Apps Script',
+                  icon: 'apps_script',
+                  perc: '70',
+                },
+                {
+                  lang: 'GIT Versioning',
+                  icon: 'git',
+                  perc: '80',
+                }
             ]
         }
     },
@@ -77,44 +98,25 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.all-height-content {
-
-    .skill-list-wrap {
-        display: flex;
-        justify-content: space-around;
-        position: relative;
-    }
-}
-
-.fade-left-enter-active, .fade-left-leave-active {
-    transition: all 0.8s ease;
-    transition-delay: 0.7s;
-    opacity: 1;
-    position: relative;
-    left: 0;
-}
-
-.fade-left-enter-from, .fade-left-leave-to {
-    transition: all 0.6s ease;
-    opacity: 0;
-    position: relative;
-    left: 10%;
-}
-
 @media screen and (min-width: $mobile) {
+  .all-height-content {
     .skill-list-wrap {
-        flex-direction: column;
-        padding: $min-margin;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      position: relative;
+      padding: $min-margin;
     }
+  }
 }
 
 @media screen and (min-width: $tablet) {
-    .all-height-content {
-        margin-top: $mid-margin;
-        .skill-list-wrap {
-                flex-direction: row;
-                margin-top: 0;
-            }
+  .all-height-content {
+    margin-top: $mid-margin;
+    .skill-list-wrap {
+      flex-direction: row;
+      margin-top: 0;
     }
+  }
 }
 </style>

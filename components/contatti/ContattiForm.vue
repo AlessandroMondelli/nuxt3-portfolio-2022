@@ -60,6 +60,8 @@ export default {
                 if( data[i] == '' ) {
                     flag = true;
                     this.formError = flag;
+                } else if ( data[i].length < 5 ) {
+                    
                 }
 
                 i++;

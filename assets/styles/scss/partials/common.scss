@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: $h1-normal-size;
 }
 
 a {
@@ -17,12 +17,17 @@ a {
     }
 }
 
+.content-container {
+    background-color: $first-color;
+    color: $font-color;
+}
+
 .text-small {
-    font-size: 12px;
+    font-size: $small-font-size;
 }
 
 .el-link {
-    transition: all 0.3s ease;
+    transition: all $common-transition;
     
     &:hover, &.active {
         color: $second-color;
@@ -44,7 +49,7 @@ a {
     background-color: $font-color;
     border: 0;
     color: $variant-first-color;
-    transition: all 0.3s ease;
+    transition: all $common-transition;
 
     &:hover {
         cursor: pointer;
@@ -109,13 +114,8 @@ a {
 }
 
 //Animations
-
 .writing-cursor {
-    animation-name: cursor;
-    animation-duration: 1.2s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
+    @include animationParameters( cursor, 1.2s, ease, forwards, infinite );
 }
 
 @keyframes cursor {
@@ -126,10 +126,7 @@ a {
 
 .float-img {
     position: relative;
-    animation-name: move;
-    animation-duration: 2.5s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
+    @include animationParameters( move, 2.5s, ease, none, infinite );
 }
 
 @keyframes move {
@@ -143,45 +140,35 @@ a {
 }
 
 .page-enter-active {
-    transition: all 2s;
+    transition: all 1.5s;
 
     & .content-container::after {
         content: '';
-        background: linear-gradient(270deg, #17ffc3, #223060);
-        background-size: 400% 400%;
-        animation: gradientAnimationExit 2s ease forwards;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0; 
-        bottom: 0;
         width: 100vw;
+        background: linear-gradient(270deg, $page-transition-color2, $page-transition-color1);
+        background-size: $page-transition-background-size;
+        @include animationParameters( gradientAnimationExit, 1.5s, ease, forwards, 1 );
+        @include positionValues( absolute, 0, 0, 0, 0);
     }
 
     & .container {
-        animation: containerShow 4s ease forwards;
+        @include animationParameters( containerShow, 4s, ease, forwards, 1 );
     }
 }
 
 .page-leave-active {
-    transition: all 2s cubic-bezier(1, 0.5, 0.8, 1);
+    transition: all 1.5s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .page-enter-from,
 .page-leave-to {
-
     & .content-container::after {
         content: '';
-        background: linear-gradient(270deg, #17ffc3, #223060);
-        background-size: 400% 400%;
-        animation: gradientAnimation 2s ease infinite; 
-        position: absolute;
-        transition: all 0.5s;
-        left: 0;
-        right: 0;
-        top: 0; 
-        bottom: 0;
         width: 100vw;
+        background: linear-gradient(270deg, $page-transition-color2, $page-transition-color1);
+        background-size: $page-transition-background-size;
+        @include animationParameters( gradientAnimation, 1.5s, ease, forwards, 1 );
+        @include positionValues( absolute, 0, 0, 0, 0);
     }
 
     & .container {
@@ -192,7 +179,7 @@ a {
 @keyframes gradientAnimation {
     0% {opacity: 0; background-position: 0% 50% }
     10% { opacity: 1 }
-    50% { background-position: 100% 50% }
+    50% { background-position: 50% 50% }
     100% { background-position: 0% 50% }
 }
 

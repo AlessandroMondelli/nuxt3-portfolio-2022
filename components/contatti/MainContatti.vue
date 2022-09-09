@@ -6,15 +6,3 @@
         </div>
     </section>
 </template>
-
-<script>
-export default {
-}
-</script>
-
-<style scoped lang="scss">
-.contatti-wrap {
-    background-color: $first-color;
-    color: $font-color;
-}
-</style>

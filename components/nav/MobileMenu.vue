@@ -15,15 +15,15 @@ export default {
 <style scoped lang="scss">
 .mobile-menu-wrap {
     position: absolute;
-    bottom: 4.5rem;
-    right: 0.5rem;
+    bottom: $min-margin + 2.5rem;
+    right: $min-margin - 1.5rem;
 
     .mobile-menu {
         list-style-type: none;
         text-align: right;
 
         li:not(:last-child) {
-            margin-bottom: 1.5rem;
+            margin-bottom: $min-margin - 0.5rem;
         }
     }
 }

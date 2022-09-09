@@ -7,7 +7,8 @@
                 </li>
             </ul>
             <ul v-if="skillType == 'hard'" :class="skillType + '-skills'">
-                <li :class="skillType + '-skill'" v-for="skill in skillsList" :key="skill.lang">
+                <li :class="skillType + '-skill'" v-for="(skill, index) in skillsList" :key="index" @mouseenter="hardOver = index" @mouseleave="hardOver = undefined"> 
+                    <p class="skill-perc" :class="{ active: hardOver == index}" :style="[ hardOver == index ? { width: skill.perc + '%' } : { width: 0 + 'px' } ] ">{{ skill.perc }}</p>
                     <p><img :src="'/assets/images/skills/' + skill.icon + '.png'" :alt="'icona ' + skill.lang"> {{ skill.lang }}</p>
                 </li>
             </ul>
@@ -16,7 +17,12 @@
 
 <script>
 export default {
-    props: [ 'skillType', 'skillsList' ]
+    props: [ 'skillType', 'skillsList' ],
+    data() {
+        return {
+            hardOver: undefined,
+        }
+    }
 }
 </script>
 
@@ -32,7 +38,25 @@ export default {
         list-style-type: none;
 
         .hard-skill {
-            margin-bottom: 0.2rem;
+            margin-bottom: 1rem;
+            position: relative;
+
+            .skill-perc {
+                position: absolute;
+                top: -120%;
+                background-color: #FFF;
+                color: #000;
+                border-radius: $max-radius;
+                font-size: $small-font-size;
+                padding: 2px 4px;
+                width: 0;
+                transition: width 0.5s ease;
+                opacity: 0;
+
+                &.active {
+                    opacity: 1;
+                }
+            }
 
             img {
                 width: $skills-imgs-size;
@@ -47,6 +71,10 @@ export default {
 @media screen and (min-width: $mobile) {
     .skills-list {
         margin: 3rem 0;
+        
+        li:not(:last-child) {
+            margin-bottom: $min-margin - 1rem;
+        }
     }
 }
 

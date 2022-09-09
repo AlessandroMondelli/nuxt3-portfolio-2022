@@ -21,11 +21,11 @@ export default {
         justify-content: space-between;
 
         .divider {
+            width: 2px;
             height: 15rem;
             margin: auto 0;
-            width: 2px;
-            background-color: #FFF;
-            border-radius: 25px;
+            background-color: $font-color;
+            border-radius: $max-radius;
         }
     }   
 }

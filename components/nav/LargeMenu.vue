@@ -20,7 +20,7 @@ export default {
     justify-content: flex-end;
 
     li:not(:last-child) {
-        margin-right: 2rem;
+        margin-right: $min-margin;
     }
 }
 </style>

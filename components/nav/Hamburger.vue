@@ -70,17 +70,17 @@ export default {
 
     .fade-down-menu-enter-active,
     .fade-down-menu-leave-active {
-    transition: all 0.8s ease;
-    opacity: 1;
-    position: absolute;
-    bottom: 4.5rem;
+        transition: all 0.8s ease;
+        opacity: 1;
+        position: absolute;
+        bottom: 4.5rem;
     }
 
     .fade-down-menu-enter-from,
     .fade-down-menu-leave-to {
-    opacity: 0;
-    position: absolute;
-    bottom: 8rem;
+        opacity: 0;
+        position: absolute;
+        bottom: 8rem;
     }
 }
 </style>

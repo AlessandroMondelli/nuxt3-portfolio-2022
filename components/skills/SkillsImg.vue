@@ -36,7 +36,7 @@ export default {
 @media screen and (min-width: $mobile) {
     .skill-img-wrap {
         position: relative;
-        transition: all 0.3s ease;
+        transition: all $common-transition;
         margin: 2rem auto;
 
         &::after {
@@ -45,7 +45,7 @@ export default {
             position: absolute;
             top: $skills-bulb-light-top;
             left: $skills-bulb-light-left;
-            transition: all 0.3s ease;
+            transition: all $common-transition;
         }
 
         &.soft::after, &.hard::after { 

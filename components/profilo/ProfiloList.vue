@@ -23,30 +23,44 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.profilo-list {
-    margin-bottom: $min-margin + 2rem;
+@media screen and (min-width: $mobile) {
+    .profilo-list {
+        margin-bottom: $min-margin + 2rem;
 
-    h2 {
-        margin: $min-margin 0 $min-margin - 1rem 0;
-        font-size: 24px;
-    }
-
-    .list-wrap {
-        .el-logo {
-            img {
-                max-width: 100px;
-                margin: $min-margin - 1rem 0;
-            }
+        h2 {
+            margin: $min-margin 0 $min-margin - 1rem 0;
+            font-size: $h2-size;
         }
 
-        .el-data {
-            h3 {
-                margin-bottom: $min-margin - 1.4rem;
-                font-weight: 600;
+        .list-wrap {
+            .el-logo {
+                img {
+                    max-width: 100px;
+                    margin: $min-margin - 1rem 0;
+                }
             }
 
-            margin-left: $min-margin - 0.5rem 0;
-            font-size: 14px;
+            .el-data {
+                h3 {
+                    margin-bottom: $min-margin - 1.4rem;
+                    font-weight: $profilo-h3-weight;
+                }
+
+                margin-left: $min-margin - 0.5rem 0;
+                font-size: $profilo-list-size;
+            }
+        }
+    }   
+}
+
+@media screen and (min-width: $laptop) {
+    .single-el-wrap {
+        display: flex; 
+        align-items: center;
+        margin-top: $min-margin + 1rem;
+
+        .el-logo {
+            margin-right: $min-margin + 4rem;
         }
     }
 }

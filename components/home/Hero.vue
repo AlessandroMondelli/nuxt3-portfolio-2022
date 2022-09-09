@@ -6,16 +6,3 @@
         </div>
     </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style scoped lang="scss">
-.hero-wrap {
-    background-color: $first-color;
-    color: $font-color;
-}
-</style>

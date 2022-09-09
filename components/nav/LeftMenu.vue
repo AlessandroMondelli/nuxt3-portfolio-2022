@@ -3,7 +3,3 @@
         <NuxtLink to="/"><p>AMDEV</p></NuxtLink>
     </div>
 </template>
-
-<style>
-
-</style>
