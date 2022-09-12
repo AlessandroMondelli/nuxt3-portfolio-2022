@@ -106,7 +106,7 @@ export default {
 @media screen and (min-width: $laptop) {
     .skill-img-wrap {
         margin: $min-margin 0 0 0;
-        width: 25%;
+        width: 20%;
 
         .arrow {
             position: relative;

@@ -1,5 +1,5 @@
 <template>
   <div class="left-nav">
-        <NuxtLink to="/"><p>AMDEV</p></NuxtLink>
+        <NuxtLink to="/">AMDEV</NuxtLink>
     </div>
 </template>

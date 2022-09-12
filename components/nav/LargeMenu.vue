@@ -1,7 +1,9 @@
 <template>
     <div class="large-menu">
         <ul class="main-menu">
-            <li class="menu-item" v-for="menuItem in menuList" :key="menuItem"><NuxtLink :to="menuItem">{{ menuItem }}</NuxtLink></li>
+            <li class="menu-item" v-for="menuItem in menuList" :key="menuItem">
+                <NuxtLink :to="menuItem">{{ menuItem }}</NuxtLink>
+            </li>
         </ul>       
     </div>
 </template>
@@ -19,8 +21,16 @@ export default {
     flex-direction: row;
     justify-content: flex-end;
 
-    li:not(:last-child) {
-        margin-right: $min-margin;
+    li {
+        border-bottom: 0;
+
+        &:not(:last-child) {
+            margin-right: $min-margin;
+        }
+
+        &.active {
+            border-bottom: 2px solid $font-color;
+        }
     }
 }
 </style>

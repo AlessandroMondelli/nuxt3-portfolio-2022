@@ -15,7 +15,7 @@
                 </form>
             </Transition>
             <Transition name="fade-up">
-                <p class="form-error text-small" v-if="formError">I campi non possono essere vuoti, riprova.</p>
+                <p class="form-error text-small" v-if="formError">Qualcosa è andato storto, controlla i campi e riprova.</p>
             </Transition>
         </div>
     </div> 

@@ -14,7 +14,7 @@
 
 <script>
 export default {
-    props: [ 'menuList' ],
+    props: [ 'menuList', 'currentRouteName' ],
     data() {
         return {
             isActive: false,

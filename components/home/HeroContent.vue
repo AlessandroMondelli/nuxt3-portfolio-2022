@@ -1,6 +1,6 @@
 <template>
     <div class="hero-content all-height-content">
-        <p>il tuo amichevole <span>web developer</span> di quartiere</p>
+        <p>il tuo amichevole <span class="glow">web developer</span> di quartiere</p>
     </div>
 </template>
 

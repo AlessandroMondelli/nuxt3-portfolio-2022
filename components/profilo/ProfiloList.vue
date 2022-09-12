@@ -4,12 +4,12 @@
         <div class="list-wrap">
             <div class="single-el-wrap" v-for="exp in profiloData.exp" :key="exp">
                 <div class="el-logo">
-                    <img :src="'assets/images/profilo/' + exp.logo" :alt="'logo' + exp.azienda" >
+                    <a :href="exp.website" target="__blank"><img :src="'assets/images/profilo/' + exp.logo" :alt="'logo' + exp.azienda" ></a>
                 </div>
                 <div class="el-data">
                     <h3>{{ exp.azienda }}</h3>
                     <p>{{ exp.posizione }}</p>
-                    <p>{{ exp.durata }}</p>
+                    <p v-if="exp.durata != ''">{{ exp.durata }}</p>
                 </div>
             </div>
         </div>

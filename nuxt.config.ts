@@ -5,6 +5,15 @@ export default defineNuxtConfig({
     head: {
         meta: [
           { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+        ],
+        script: [
+            {
+                src: "https://www.googletagmanager.com/gtag/js?id=G-GZHFM0W7RW",
+                async: true,
+            },
+            {
+                src: "@/assets/scripts/ga.js",
+            }
         ]
     },
 

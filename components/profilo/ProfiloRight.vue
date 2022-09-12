@@ -16,7 +16,8 @@ export default {
                         azienda: 'Isegno srl',
                         logo: 'logo_isegno.png',
                         posizione: 'IT & Web Developer',
-                        durata: 'Maggio 2020 - oggi'
+                        durata: 'Maggio 2020 - oggi',
+                        website: 'https://www.isegno.com'
                     },
                 ],
             },
@@ -26,14 +27,14 @@ export default {
                     {
                         azienda: 'Boolean Careers',
                         logo: 'logo_boolean.png',
-                        posizione: 'Full Stack Web Developer',
-                        durata: 'Ottobre 2019 - Marzo 2020'
+                        posizione: 'Certificazione Full Stack Web Developer',
+                        website: 'https://boolean.careers/'
                     },
                     {
                         azienda: 'I.T.T. Montani di Fermo',
                         logo: 'logo_montani.png',
                         posizione: 'Diploma in Informatica',
-                        durata: '2012-2018'
+                        website: 'https://www.istitutomontani.edu.it/web/'
                     },
                 ],
             },

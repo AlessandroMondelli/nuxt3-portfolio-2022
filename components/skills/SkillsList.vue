@@ -31,7 +31,7 @@ export default {
     width: 200px;
 
     h2 {
-        margin-bottom: 1.4rem;
+        margin-bottom: $min-margin - 0.6rem;
     }
 
     .hard-skills {
@@ -40,6 +40,10 @@ export default {
         .hard-skill {
             margin-bottom: 1rem;
             position: relative;
+
+            &:hover {
+                cursor: default;
+            }
 
             .skill-perc {
                 position: absolute;
@@ -60,7 +64,7 @@ export default {
 
             img {
                 width: $skills-imgs-size;
-                margin-right: 0.5rem;
+                margin-right: $min-margin - 1.5rem;
                 vertical-align: middle;
                 filter: grayscale(1) invert(1);
             }
