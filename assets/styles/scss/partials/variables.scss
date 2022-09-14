@@ -31,6 +31,8 @@ $nav-height-sm: 12vh;
 $nav-height-md: 10vh;
 $nav-height-lg: 8vh;
 
+$nav-mobile-bottom: $min-margin + 4rem;
+
 //Hamburger
 $hamburger-width: 32px;
 $hamburger-height: 26px;
@@ -77,7 +79,7 @@ $progetti-langs-size-sm: 14px;
 $progetti-langs-size-md: 16px;
 
 //Breakpoints
-$mobile: 320px;
+$mobile: 280px;
 $tablet: 768px;
 $laptop: 1024px;
 $xl: 1200px;

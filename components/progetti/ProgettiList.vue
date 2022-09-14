@@ -1,14 +1,14 @@
 <template>
     <div class="progetti-list-wrap">
         <ul class="progetti-list">
-            <li class="progetti-list-el progetti-lang el-link" v-for="project in projectsArray" :key="project" @click="returnValue(project)">{{ project.projectTitle }}</li>
+            <li class="progetti-list-el progetti-lang el-link" v-for="project in projects" :key="project" @click="returnValue(project)">{{ project.projectTitle }}</li>
         </ul>
     </div>
 </template>
 
 <script>
 export default {
-    props: [ 'langUrl', 'projectsArray' ],
+    props: [ 'projects' ],
     methods: {
         returnValue( project ) {
             this.$emit( 'return-project', project );

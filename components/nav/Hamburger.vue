@@ -6,15 +6,21 @@
             <span class="line line3"></span>
         </div>
         <Transition name="fade-down-menu">
-            <NavMobileMenu :menuList="menuList" v-if="isActive" />
+            <NavMobileMenu :menuList="menuList" v-if="isActive" @menu-clicked="getMenuClicked" />
         </Transition>
-        
     </div>
 </template>
 
 <script>
+import { useHamburgerStatus } from '@/stores/hamburgerStatus';
+
 export default {
-    props: [ 'menuList', 'currentRouteName' ],
+    setup() {
+        const hamburgerStatus = useHamburgerStatus();
+
+        return { hamburgerStatus }
+    },
+    props: [ 'menuList' ],
     data() {
         return {
             isActive: false,
@@ -23,8 +29,14 @@ export default {
     methods: {
         hamburgerClick() {
             this.isActive = !this.isActive;
+            this.hamburgerStatus.changeState;
+        },
+        getMenuClicked( e ) { //Recupero emits voce di menu cliccata
+            if( e )
+                this.isActive = false;
         }
-    }
+    },
+    
 }
 </script>
 
@@ -73,14 +85,14 @@ export default {
         transition: all 0.8s ease;
         opacity: 1;
         position: absolute;
-        bottom: 4.5rem;
+        bottom: $nav-mobile-bottom;
     }
 
     .fade-down-menu-enter-from,
     .fade-down-menu-leave-to {
         opacity: 0;
         position: absolute;
-        bottom: 8rem;
+        bottom: $min-margin + 6rem;
     }
 }
 </style>

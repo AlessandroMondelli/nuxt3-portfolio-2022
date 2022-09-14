@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         ],
         script: [
             {
-                src: "https://www.googletagmanager.com/gtag/js?id=G-GZHFM0W7RW",
+                src: "https://www.googletagmanager.com/gtag/js?id=" + process.env.GOOGLE_ANALYTICS_ID,
                 async: true,
             },
             {
@@ -20,6 +20,10 @@ export default defineNuxtConfig({
     css: [
         '@/assets/styles/scss/main.scss',
     ],
+
+    modules: [
+        '@pinia/nuxt',
+      ],
 
     vite: {
         css: {

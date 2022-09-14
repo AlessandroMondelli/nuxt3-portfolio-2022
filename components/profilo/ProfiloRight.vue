@@ -1,44 +1,18 @@
 <template>
     <div class="profilo-section profilo-right-section">
-        <ProfiloList :profiloData="workExps" />
-        <ProfiloList :profiloData="formazione" />
+        <ProfiloList :profiloData="profiloData.workExps" />
+        <ProfiloList :profiloData="profiloData.formazione" />
     </div> 
 </template>
 
 <script>
+import { useProfiloData } from '@/stores/profiloData';
+
 export default {
-    data() {
-        return {
-            workExps: { 
-                title: 'Esperienze lavorative',
-                exp: [
-                    {
-                        azienda: 'Isegno srl',
-                        logo: 'logo_isegno.png',
-                        posizione: 'IT & Web Developer',
-                        durata: 'Maggio 2020 - oggi',
-                        website: 'https://www.isegno.com'
-                    },
-                ],
-            },
-            formazione: { 
-                title: 'Formazione',
-                exp: [
-                    {
-                        azienda: 'Boolean Careers',
-                        logo: 'logo_boolean.png',
-                        posizione: 'Certificazione Full Stack Web Developer',
-                        website: 'https://boolean.careers/'
-                    },
-                    {
-                        azienda: 'I.T.T. Montani di Fermo',
-                        logo: 'logo_montani.png',
-                        posizione: 'Diploma in Informatica',
-                        website: 'https://www.istitutomontani.edu.it/web/'
-                    },
-                ],
-            },
-        }
+    setup() {
+        const profiloData = useProfiloData();
+
+        return { profiloData };
     }
 }
 </script>
@@ -47,6 +21,7 @@ export default {
 @media screen and (min-width: $mobile) {
     .profilo-right-section {
         margin: $min-margin + 2rem 0;
+        padding-bottom: $min-margin;
     }
 }
 
@@ -57,6 +32,7 @@ export default {
 
         &.profilo-right-section {
             margin: 0;
+            padding-bottom: 0;
         }
     }
 }

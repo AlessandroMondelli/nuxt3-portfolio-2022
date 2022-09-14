@@ -33,10 +33,17 @@ export default {
         }
 
         .list-wrap {
+            
             .el-logo {
+                transition: transform $common-transition;
+
                 img {
                     max-width: 100px;
                     margin: $min-margin - 1rem 0;
+                }
+
+                &:hover {
+                    transform: scale(0.95);
                 }
             }
 

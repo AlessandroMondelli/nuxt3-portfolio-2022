@@ -5,8 +5,13 @@
         width: $container-width-sm;
     }
 
+    .content-wrap.active .content-container {
+        overflow-y: hidden;
+    }
+
     .content-container {
         overflow-y: auto;
+        overflow-x: hidden;
     }
 
     .container {

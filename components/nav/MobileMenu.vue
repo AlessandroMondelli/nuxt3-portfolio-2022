@@ -1,7 +1,7 @@
 <template>
     <div class="mobile-menu-wrap">
         <ul class="mobile-menu">
-            <li class="mobile-menu-le" v-for="menuEl in menuList" :key="menuEl"><NuxtLink :to="menuEl">{{ menuEl }}</NuxtLink></li>
+            <li class="mobile-menu-le" v-for="menuEl in menuList" :key="menuEl"><NuxtLink :to="menuEl" @click="menuClicked">{{ menuEl }}</NuxtLink></li>
         </ul>
     </div> 
 </template>
@@ -9,14 +9,20 @@
 <script>
 export default {
     props: [ 'menuList' ],
+    methods: {
+        menuClicked() {
+            this.$emit( 'menu-clicked', true );
+        }
+    }
 }
 </script>
 
 <style scoped lang="scss">
 .mobile-menu-wrap {
     position: absolute;
-    bottom: $min-margin + 2.5rem;
+    bottom: $nav-mobile-bottom;
     right: $min-margin - 1.5rem;
+    text-shadow: -1px -1px 0 $first-color, 1px -1px 0 $first-color, -1px 1px 0 $first-color, 1px 1px 0 $first-color;
 
     .mobile-menu {
         list-style-type: none;

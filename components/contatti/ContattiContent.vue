@@ -23,11 +23,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@media screen and (min-width: $mobile) {
+    .contatti-content-wrap {
+        padding-bottom: $min-margin;
+    }
+}
+
 @media screen and (min-width: $tablet) {
     .contatti-content-wrap {
         display: flex;
         justify-content: space-between;
         height: 85%;
+        padding-bottom: 0;
     }
 }
 

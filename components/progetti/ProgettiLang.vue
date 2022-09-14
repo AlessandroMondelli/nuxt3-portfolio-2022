@@ -1,14 +1,21 @@
 <template>
   <div class="progetti-lang-wrap">
         <ul class="progetti-langs">
-            <li class="progetti-lang el-link" v-for="(projectData, index) in projects" :key="index" @click="returnValue(projectData.projectLang, index)" :class="{ 'active': activeLang === index, 'project-active': activeProject !== false }">{{ projectData.projectLang }}</li>
+            <li class="progetti-lang el-link" v-for="(projectData, index) in projectsArray.projects" :key="index" @click="returnValue(projectData.projectLang, index)" :class="{ 'active': activeLang === index, 'project-active': activeProject !== false }">{{ projectData.projectLang }}</li>
         </ul>
     </div>
 </template>
 
 <script>
+import { useProjectsList } from '@/stores/projectsList';
+
 export default {
-    props: [ 'projects', 'activeProject' ],
+    setup() {
+        const projectsArray = useProjectsList();
+
+        return { projectsArray };
+    },
+    props: [ 'activeProject' ],
     data() {
         return {
             activeLang: '',
@@ -85,6 +92,4 @@ export default {
     }
 
 }
-
-
 </style>
