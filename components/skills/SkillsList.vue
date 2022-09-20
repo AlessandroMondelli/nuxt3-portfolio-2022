@@ -22,27 +22,22 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.skills-list {
-    width: 200px;
-
-    h2 {
-        margin-bottom: $min-margin - 0.6rem;
-    }
-
-    .hard-skills {
-        list-style-type: none;
-    }
-}
-
 @media screen and (min-width: $mobile) {
     .skills-list {
-        margin: 3rem 0;
+    
+        h2 {
+            margin-bottom: $min-margin - 0.6rem;
+        }
+
+        .hard-skills {
+            list-style-type: none;
+        }
     }
 }
 
 @media screen and (min-width: $tablet) {
     .skills-list {
-        margin: 0;
+        width: 200px;
     }
 }
 </style>

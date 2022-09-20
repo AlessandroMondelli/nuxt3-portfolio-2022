@@ -14,7 +14,6 @@
         </p>
         <div class="linkedin-link">
             <p>Scopri di più su <a href="https://www.linkedin.com/in/alessandro-mondelli-5b15971a1" target="__blank"><i class="fa-brands fa-linkedin"></i></a></p>
-            
         </div>
     </div>
 </template>

@@ -31,6 +31,30 @@ export default {
         &.active {
             border-bottom: 2px solid $font-color;
         }
+
+        a {
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 0;
+                transition: all $common-transition;
+            }
+
+            &:hover:after {
+                content: '';
+                position: absolute;
+                bottom: -10%;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $font-color;
+            }
+
+            &.router-link-active {
+                border-bottom: 2px solid $font-color;
+            }
+        }
     }
 }
 </style>

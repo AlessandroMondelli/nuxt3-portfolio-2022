@@ -74,6 +74,10 @@
             height: 100vh - $nav-height-md;
         }
     }
+
+    ::-webkit-scrollbar {
+        width: $md-width;
+    }
 }
 
 @media screen and ( min-width: $laptop ) {

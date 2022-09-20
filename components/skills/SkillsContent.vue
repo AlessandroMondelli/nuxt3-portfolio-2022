@@ -7,7 +7,6 @@
                     <SkillsList :key="skillChange" :skillType="skillChoose" />
                 </Transition>
             </div>
-            
         </div>
     </div>
 </template>
@@ -16,16 +15,16 @@
 export default {
     data() {
         return {
-            skillChoose: '',
-            skillChange: false, 
-        }
+            skillChoose: "",
+            skillChange: false,
+        };
     },
     methods: {
         getSkillTypeChoose(e) {
             this.skillChoose = e;
             this.skillChange = !this.skillChange;
         }
-    }
+    },
 }
 </script>
 

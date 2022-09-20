@@ -11,16 +11,30 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.hero-content {
-    justify-content: flex-end;
+@media screen and (min-width: $mobile) {
+    .hero-content {
+        justify-content: flex-end;
 
-    p {
-        font-size: $hero-p-size;
+        p {
+            font-size: $hero-p-size;
 
-        span {
-            color: $second-color;
-            font-size: $hero-span-size;
+            .glow {
+                color: $second-color;
+                font-size: $hero-span-size;
+                display: block;
+            }
+        }
+    }   
+}
+
+@media screen and (min-width: $tablet) {
+    .hero-content {
+        p {
+            .glow {
+                display: inline;
+            }
         }
     }
 }
+
 </style>

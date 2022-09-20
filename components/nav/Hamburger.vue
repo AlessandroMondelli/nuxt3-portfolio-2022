@@ -29,11 +29,12 @@ export default {
     methods: {
         hamburgerClick() {
             this.isActive = !this.isActive;
-            this.hamburgerStatus.changeState;
+            this.hamburgerStatus.changeState();
         },
         getMenuClicked( e ) { //Recupero emits voce di menu cliccata
             if( e )
                 this.isActive = false;
+                this.hamburgerStatus.changeState();
         }
     },
     

@@ -4,7 +4,7 @@
         <div class="list-wrap">
             <div class="single-el-wrap" v-for="exp in profiloData.exp" :key="exp">
                 <div class="el-logo">
-                    <a :href="exp.website" target="__blank"><img :src="'assets/images/profilo/' + exp.logo" :alt="'logo' + exp.azienda" ></a>
+                    <a :href="exp.website" target="__blank"><img :src="'assets/images/profilo/' + exp.logo" :alt="'logo' + exp.azienda"></a>
                 </div>
                 <div class="el-data">
                     <h3>{{ exp.azienda }}</h3>

@@ -23,36 +23,39 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.hard-skill {
+
+@media screen and (min-width: $mobile) {
+    .hard-skill {
     margin-bottom: 1rem;
     position: relative;
 
-    &:hover {
-        cursor: default;
-    }
-
-    .skill-perc {
-        position: absolute;
-        top: -120%;
-        background-color: #FFF;
-        color: #000;
-        border-radius: $max-radius;
-        font-size: $small-font-size;
-        padding: 2px 4px;
-        width: 0;
-        transition: width 0.5s ease;
-        opacity: 0;
-
-        &.active {
-            opacity: 1;
+        &:hover {
+            cursor: default;
         }
-    }
 
-    img {
-        width: $skills-imgs-size;
-        margin-right: $min-margin - 1.5rem;
-        vertical-align: middle;
-        filter: grayscale(1) invert(1);
-    }
+        .skill-perc {
+            position: absolute;
+            top: -120%;
+            background-color: #FFF;
+            color: #000;
+            border-radius: $max-radius;
+            font-size: $small-font-size;
+            padding: 2px 4px;
+            width: 0;
+            transition: width 0.5s ease;
+            opacity: 0;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+
+        img {
+            width: $skills-imgs-size;
+            margin-right: $min-margin - 1.5rem;
+            vertical-align: middle;
+            filter: grayscale(1) invert(1);
+        }
+    }    
 }
 </style>

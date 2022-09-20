@@ -1,8 +1,9 @@
 <template>
   <div class="progetti-lang-wrap">
         <ul class="progetti-langs">
-            <li class="progetti-lang el-link" v-for="(projectData, index) in projectsArray.projects" :key="index" @click="returnValue(projectData.projectLang, index)" :class="{ 'active': activeLang === index, 'project-active': activeProject !== false }">{{ projectData.projectLang }}</li>
+            <li class="progetti-lang el-link" v-for="(projectData, index) in projectsArray.projects" :key="index" @click="returnValue(projectData.projectLang, index)" :class="{ 'active': activeLang === index, 'project-active': activeProject !== false, 'not-active': activeProject !== false && activeLang !== index }">{{ projectData.projectLang }}</li>
         </ul>
+        <CommonIconLink :imgName="'github'" :imgLink="'https://github.com/AlessandroMondelli'" />
     </div>
 </template>
 
@@ -33,20 +34,28 @@ export default {
 
 <style scoped lang="scss">
 @media screen and (min-width: $mobile) { 
-    .progetti-langs {
-        list-style-type: none;
-        margin-bottom: ($min-margin + 2rem);
+    .progetti-lang-wrap {
+        display: flex;
+        flex-direction: column;
 
-        .progetti-lang {
-            display: inline-block;
-            font-size: $progetti-langs-size-sm;
+        .progetti-langs {
+            list-style-type: none;
 
-            &.project-active {
-                pointer-events: none;
-            }
-            
-            &:not(:last-child) {
-                margin-right: ( $min-margin - 0.5rem );
+            .progetti-lang {
+                display: inline-block;
+                font-size: $progetti-langs-size-sm;
+
+                &.project-active {
+                    pointer-events: none;
+                }
+
+                &.not-active {
+                    color: $font-not-active;
+                }
+                
+                &:not(:last-child) {
+                    margin-right: ( $min-margin - 0.5rem );
+                }
             }
         }
     }
@@ -55,6 +64,8 @@ export default {
 @media screen and (min-width: $tablet) { 
     .progetti-lang-wrap {
         width: 50%;
+        display: block;
+
         .progetti-langs { 
             .progetti-lang {
                 display: block;
@@ -90,6 +101,5 @@ export default {
     .progetti-lang-wrap {
         width: 35%;
     }
-
 }
 </style>

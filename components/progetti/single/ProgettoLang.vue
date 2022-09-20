@@ -1,7 +1,7 @@
 <template>
     <div class="tech-wrap">
         <div class="tech-logo" v-for="technology in activeProject.tech" :key="technology"> 
-            <img :src="'/assets/images/skills/' + technology + '.png'" />
+            <img :src="'/assets/images/skills/' + technology + '.png'">
         </div>
     </div>  
 </template>

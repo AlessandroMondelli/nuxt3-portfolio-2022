@@ -4,6 +4,7 @@ $variant-first-color: #2D46B9;
 $second-color: #00FFAB; 
 $font-color: #FFF;
 $a-color: #FFF;
+$font-not-active: rgba( 255, 255, 255, 0.4 );
 
 $skills-img-soft-color: #edfa31;
 $skills-img-hard-color: #a81914;
@@ -56,6 +57,7 @@ $hero-p-size: 20px;
 $hero-span-size: 32px;
 $h1-normal-size: 32px;
 $small-font-size: 12px;
+$medium-font-size: 18px;
 
 $h2-size: 24px;
 
@@ -72,7 +74,7 @@ $skills-bulbs-float-width-md: 50%;
 $skills-bulbs-width: 100px;
 
 $skills-bulb-light-top: 150px;
-$skills-bulb-light-left: 45%;
+$skills-bulb-light-left: 50%;
 
 //Projects
 $progetti-langs-size-sm: 14px;
@@ -83,3 +85,7 @@ $mobile: 280px;
 $tablet: 768px;
 $laptop: 1024px;
 $xl: 1200px;
+
+//Scrollbar
+$md-width: 5px;
+$border-radius: 10px;

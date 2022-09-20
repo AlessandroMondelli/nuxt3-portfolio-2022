@@ -7,7 +7,8 @@ export const useSkillsList = defineStore({
             'Problem Solving', 
             'Capacità di adattamento', 
             'Propenso al lavoro di squadra', 
-            'Propenso alla formazione continua', 
+            'Propenso alla formazione continua',
+            'Resistenza allo stress', 
             'Gestione organizzata delle task', 
             'Puntualità' 
         ],
@@ -15,17 +16,17 @@ export const useSkillsList = defineStore({
             {
                 lang: 'HTML',
                 icon: 'html5',
-                perc: '80',
+                perc: '85',
             },
             {
                 lang: 'CSS',
                 icon: 'css',
-                perc: '75',
+                perc: '85',
             },
             {
                 lang: 'SCSS',
                 icon: 'sass',
-                perc: '70',
+                perc: '80',
             },
             {
                 lang: 'JavaScript',
@@ -35,7 +36,7 @@ export const useSkillsList = defineStore({
             {
                 lang: 'JQuery',
                 icon: 'jquery',
-                perc: '70',
+                perc: '75',
             },
             {
                 lang: 'Vue.js',
@@ -45,12 +46,12 @@ export const useSkillsList = defineStore({
             {
                 lang: 'Nuxt.js',
                 icon: 'nuxt',
-                perc: '65',
+                perc: '70',
             },
             {
                 lang: 'PHP',
                 icon: 'php',
-                perc: '70',
+                perc: '65',
             },
             {
                 lang: 'MySQL',

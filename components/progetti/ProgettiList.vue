@@ -12,6 +12,7 @@ export default {
     methods: {
         returnValue( project ) {
             this.$emit( 'return-project', project );
+            gtag('event', 'click_project');
         }
     }
 }

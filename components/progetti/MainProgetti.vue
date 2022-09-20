@@ -7,12 +7,6 @@
     </section>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style scoped lang="scss">
 .progetti-wrap {
     background-color: $first-color;

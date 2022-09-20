@@ -1,15 +1,14 @@
 <template>
-    <div class="skill-img-wrap" :class="softChoose">
+    <div class="skill-img-wrap" :class="skillChoose">
         <div class="float-img">
-            <img src="@/assets/images/light-bulb-white-l.png" alt="light bulb soft skills" @click="returnValue('soft')" class="soft-skills-img" :class="{ 'active' : softChoose == 'soft' }">
-            <div class="arrow">
-                
+            <img src="@/assets/images/light-bulb-white-l.png" alt="light bulb soft skills" @click="returnValue('soft')" class="soft-skills-img" :class="{ 'active' : skillChoose == 'soft' }">
+            <div class="arrow" :class="{ active: skillChoose != '' }">
                 <img class="img-arrow" src="@/assets/images/handwritten_arrow.png" alt="freccia disegnata a mano" />
-                <p>Clicca la lampadina per scoprire le skills</p>
+                <p class="text-arrow">Clicca la lampadina per scoprire le skills</p>
             </div>
         </div>
-        <div class="float-img magnet-el">
-            <img src="@/assets/images/light-bulb-white-r.png" alt="light bulb hard skills" @click="returnValue('hard')" class="hard-skills-img" :class="{ 'active' : softChoose == 'hard' }">   
+        <div class="float-img">
+            <img src="@/assets/images/light-bulb-white-r.png" alt="light bulb hard skills" @click="returnValue('hard')" class="hard-skills-img" :class="{ 'active' : skillChoose == 'hard' }">  
         </div>
     </div>
 </template>
@@ -18,14 +17,16 @@
 export default {
     data() {
         return {
-            softChoose: '',
+            skillChoose: '',
         }
     },
     methods: {
-        returnValue( softChooseState ) {
-            if( this.softChoose == '' || softChooseState != this.softChoose ) {
-                this.softChoose = softChooseState;
-                this.$emit( 'return-value', softChooseState );
+        returnValue( skillChooseState ) { 
+            if( this.skillChoose == '' || skillChooseState != this.skillChoose ) {
+                this.skillChoose = skillChooseState;
+                this.$emit( 'return-value', skillChooseState );
+
+                gtag('event', 'click_skill');
             }
         },
     }
@@ -38,6 +39,8 @@ export default {
         position: relative;
         transition: all $common-transition;
         margin: 2rem auto;
+        display: flex;
+        justify-content: center;
 
         &::after {
             content: '';
@@ -83,6 +86,19 @@ export default {
                 }
             }
 
+            .arrow.active {
+            
+                & .img-arrow {
+                    transition: all 0.8s ease;
+                    transform: rotate( 150deg );
+                    margin-top: $min-margin + 1rem;
+                }
+
+                & .text-arrow {
+                    transition: opacity 0.2s;
+                    opacity: 0;
+                }
+            }
         }
     }
 }
@@ -99,6 +115,18 @@ export default {
 
         .float-img {
             width: $skills-bulbs-float-width-md;
+
+            .arrow.active {
+                transition: transform $common-transition;
+                
+                & .img-arrow {
+                    transform: none;
+                }
+
+                & .text-arrow {
+                    opacity: 1;
+                }
+            }
         }
     }
 }
