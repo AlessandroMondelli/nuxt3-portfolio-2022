@@ -39,13 +39,43 @@ export default {
     .left-nav {
       a {
         position: relative;
-        top: 15px;
+        top: $title-animation-active-start-pos;
         opacity: 0;
         transition: all $common-transition;
          
         &.active {
           top: 0;
           opacity: 1;
+        }
+
+        &::before, &::after {
+          color: $first-color;
+          opacity: 0;
+          transition: all $common-transition;
+        }
+
+        &:hover::before, &:hover::after {
+          opacity: 1;
+        }
+
+        &::before {
+          content: '<';
+          position: relative;
+          right: $title-animation-el-start-pos;
+        }
+
+        &::after {
+          content: '/>';
+          position: relative;
+          left: $title-animation-el-start-pos;
+        }
+
+        &:hover::before {
+          right: $title-animation-el-final-pos;
+        }
+
+        &:hover::after {
+          left: $title-animation-el-final-pos;
         }
       }
     }

@@ -1,7 +1,7 @@
 <template>
     <div class="progetto-media-wrap">
         <div v-if="activeProject.media != ''" class="tech-video">
-            <video :src="'/assets/videos/projects/' + activeProject.media + '.mp4'" autoplay controls></video>
+            <video :src="'/videos/' + activeProject.media + '.mp4'" autoplay controls></video>
         </div>
     </div>       
 </template>

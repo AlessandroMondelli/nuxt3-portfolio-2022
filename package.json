@@ -7,12 +7,15 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
+    "@iconify-json/fa6-brands": "^1.1.6",
+    "@iconify-json/mdi": "^1.1.33",
+    "@iconify-json/uil": "^1.1.2",
     "node-sass": "^7.0.1",
     "nuxt": "3.0.0-rc.8",
-    "sass-loader": "^13.0.2"
+    "sass-loader": "^13.0.2",
+    "unplugin-icons": "^0.14.10"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.2.0",
     "@pinia/nuxt": "^0.4.2",
     "firebase": "^9.9.3",
     "pinia": "^2.0.22",

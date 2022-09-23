@@ -1,6 +1,6 @@
 <template>
     <div class="close-project">
-        <img src="@/assets/images/close.png" alt="X per chiudere elemento">
+        <img src="/images/close.png" alt="X per chiudere elemento">
     </div>    
 </template>
 

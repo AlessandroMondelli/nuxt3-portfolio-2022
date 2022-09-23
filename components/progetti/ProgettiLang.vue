@@ -3,7 +3,6 @@
         <ul class="progetti-langs">
             <li class="progetti-lang el-link" v-for="(projectData, index) in projectsArray.projects" :key="index" @click="returnValue(projectData.projectLang, index)" :class="{ 'active': activeLang === index, 'project-active': activeProject !== false, 'not-active': activeProject !== false && activeLang !== index }">{{ projectData.projectLang }}</li>
         </ul>
-        <CommonIconLink :imgName="'github'" :imgLink="'https://github.com/AlessandroMondelli'" />
     </div>
 </template>
 

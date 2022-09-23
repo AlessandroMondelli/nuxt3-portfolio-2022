@@ -6,6 +6,7 @@
             <ProgettiSingleProgettoDescription :activeProject="activeProject" />
             <ProgettiSingleProgettoMedia v-if="activeProject.media != ''" :activeProject="activeProject" />
             <p class="privacy-warn text-small" v-else>Per rispettare la privacy dell'azienda, non verranno mostrati contenuti grafici. Per maggiori informazioni, inviare una richiesta tramite il form presente nella sezione contatti.</p>
+            <ProgettiSingleProgettoFooter :activeProject="activeProject" />
         </div>
     </div>
 </template>

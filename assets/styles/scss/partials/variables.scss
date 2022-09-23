@@ -15,6 +15,8 @@ $scrollbar-color-hover: rgba(198, 194, 195, 0.3);
 $page-transition-color1: #223060;
 $page-transition-color2: #17ffc3;
 
+$linkedin: #0A66C2;
+
 //Transitions
 $common-transition: 0.3s ease;
 
@@ -33,6 +35,10 @@ $nav-height-md: 10vh;
 $nav-height-lg: 8vh;
 
 $nav-mobile-bottom: $min-margin + 4rem;
+
+$title-animation-active-start-pos: 15px; 
+$title-animation-el-start-pos: 30px;
+$title-animation-el-final-pos: 5px;
 
 //Hamburger
 $hamburger-width: 32px;
@@ -64,6 +70,8 @@ $h2-size: 24px;
 $profilo-h3-weight: 600;
 $profilo-text-margin: 1.5rem;
 $profilo-list-size: 14px;
+
+$brand-icon-size: 28px;
 
 //Skills
 $skills-imgs-size: 20px;

@@ -14,10 +14,10 @@ export default {
         return {
             messageActive: false,
             message: '',
-            startMessage: 'Per domande o collaborazioni, non esitare a lasciarmi un messaggio.',
+            startMessage: 'Per qualsiasi informazione, non esitare a lasciarmi un messaggio.',
             thankYouMessage: 'Grazie per avermi contattato.',
             thanksOutput: false,
-            speed: 50,
+            speed: 45,
             i: 0,
         }
     },

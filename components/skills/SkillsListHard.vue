@@ -1,7 +1,7 @@
 <template>
     <li class="hard-skill" v-for="(skill, index) in skillList.hardSkills" :key="index" @mouseenter="hardOver = index" @mouseleave="hardOver = undefined"> 
         <p class="skill-perc" :class="{ active: hardOver == index}" :style="[ hardOver == index ? { width: skill.perc + '%' } : { width: 0 + 'px' } ] ">{{ skill.perc }}</p>
-        <p><img :src="'/assets/images/skills/' + skill.icon + '.png'" :alt="'icona ' + skill.lang"> {{ skill.lang }}</p>
+        <p><img :src="'/images/skills/' + skill.icon + '.png'" :alt="'icona ' + skill.lang"> {{ skill.lang }}</p>
     </li>
 </template>
 
@@ -26,7 +26,7 @@ export default {
 
 @media screen and (min-width: $mobile) {
     .hard-skill {
-    margin-bottom: 1rem;
+    margin-bottom: $min-margin - 1rem;
     position: relative;
 
         &:hover {
@@ -36,13 +36,13 @@ export default {
         .skill-perc {
             position: absolute;
             top: -120%;
-            background-color: #FFF;
+            background-color: $font-color;
             color: #000;
             border-radius: $max-radius;
             font-size: $small-font-size;
             padding: 2px 4px;
             width: 0;
-            transition: width 0.5s ease;
+            transition: all $common-transition;
             opacity: 0;
 
             &.active {

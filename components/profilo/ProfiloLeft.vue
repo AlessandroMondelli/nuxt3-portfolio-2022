@@ -1,7 +1,7 @@
 <template>
     <div class="profilo-section profilo-left-section">
         <p>
-            Alessandro è uno sviluppatore Web classe '98, appassionato del settore IT e determinato nel migliorarsi ogni giorno per raggiungere i proprio obiettivi.
+            Alessandro è uno sviluppatore Web classe '98, appassionato del settore IT e determinato nel migliorarsi ogni giorno per raggiungere i propri obiettivi.
         </p>
         <p>
             Si è diplomato in informatica all'istituto I.T.T Montani di Fermo, per poi decidere di approfondire le conoscenze da Web Developer con il corso intensivo di Boolean Careers.
@@ -13,15 +13,13 @@
             Nel tempo libero ama giocare ai videogiochi, leggere e studiare nuove tecnologie.
         </p>
         <div class="linkedin-link">
-            <p>Scopri di più su <a href="https://www.linkedin.com/in/alessandro-mondelli-5b15971a1" target="__blank"><i class="fa-brands fa-linkedin"></i></a></p>
+            <p>Scopri di più su <a href="https://www.linkedin.com/in/alessandro-mondelli-5b15971a1" target="__blank"><icon-linkedin class="brand-icon"/></a></p>
         </div>
     </div>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+import IconLinkedin from '~icons/fa6-brands/linkedin';
 </script>
 
 <style scoped lang="scss">
@@ -30,14 +28,17 @@ export default {
             margin-bottom: $profilo-text-margin;
         }  
 
-        .fa-linkedin {
-            font-size: $hero-span-size;
+        .brand-icon {
+            font-size: $brand-icon-size;
             margin-left: $min-margin - 1rem;
-            transition: color $common-transition;
+            transition: all $common-transition;
+            vertical-align: middle;
 
             &:hover {
-                color: #0A66C2;
+                color: $linkedin;
                 cursor: pointer;
+                box-shadow: -1px -1px 20px 1px #0A66C2;
+                border-radius: 4px;
             }
         }
     }

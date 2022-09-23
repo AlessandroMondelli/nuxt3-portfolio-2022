@@ -1,14 +1,14 @@
 <template>
     <div class="skill-img-wrap" :class="skillChoose">
         <div class="float-img">
-            <img src="@/assets/images/light-bulb-white-l.png" alt="light bulb soft skills" @click="returnValue('soft')" class="soft-skills-img" :class="{ 'active' : skillChoose == 'soft' }">
+            <img src="/images/light-bulb-white-l.png" alt="light bulb soft skills" @click="returnValue('soft')" class="soft-skills-img" :class="{ 'active' : skillChoose == 'soft' }">
             <div class="arrow" :class="{ active: skillChoose != '' }">
-                <img class="img-arrow" src="@/assets/images/handwritten_arrow.png" alt="freccia disegnata a mano" />
+                <img class="img-arrow" src="/images/handwritten_arrow.png" alt="freccia disegnata a mano" />
                 <p class="text-arrow">Clicca la lampadina per scoprire le skills</p>
             </div>
         </div>
         <div class="float-img">
-            <img src="@/assets/images/light-bulb-white-r.png" alt="light bulb hard skills" @click="returnValue('hard')" class="hard-skills-img" :class="{ 'active' : skillChoose == 'hard' }">  
+            <img src="/images/light-bulb-white-r.png" alt="light bulb hard skills" @click="returnValue('hard')" class="hard-skills-img" :class="{ 'active' : skillChoose == 'hard' }">  
         </div>
     </div>
 </template>

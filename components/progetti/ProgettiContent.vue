@@ -63,7 +63,7 @@ export default {
 
 @media screen and (min-width: $laptop) {
     .progetti-wrap {
-        margin-top: $min-margin + 8rem;
+        margin-top: $min-margin + 6rem;
     }
 }
 </style>

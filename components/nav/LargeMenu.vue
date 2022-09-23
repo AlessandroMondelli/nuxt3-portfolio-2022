@@ -37,18 +37,18 @@ export default {
 
             &::after {
                 content: '';
+                position: absolute;
+                bottom: -10%;
+                left: 0;
                 width: 0;
+                height: 2px;
+                background-color: $font-color;
                 transition: all $common-transition;
             }
 
             &:hover:after {
                 content: '';
-                position: absolute;
-                bottom: -10%;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                background-color: $font-color;
+                width: 100%; 
             }
 
             &.router-link-active {
