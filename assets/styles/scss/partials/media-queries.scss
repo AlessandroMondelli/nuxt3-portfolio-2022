@@ -1,5 +1,15 @@
 //Media queries
 @media screen and ( min-width: $mobile ) {
+    body {
+        overflow: hidden;
+        min-height: -webkit-fill-available;
+        padding:
+            env(safe-area-inset-top, 20px)
+            env(safe-area-inset-right, 20px)
+            env(safe-area-inset-bottom, 20px)
+            env(safe-area-inset-left, 20px)
+    }
+
     .container, .nav-container {
         margin: 0 auto;
         width: $container-width-sm;
@@ -44,6 +54,11 @@
 }
 
 @media screen and ( min-width: $tablet ) {
+    body {
+        min-height: auto;
+        padding: 0;
+    }
+
     .container, .nav-container {
         width: $container-width-md;
     }
