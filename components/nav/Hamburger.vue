@@ -47,8 +47,8 @@ export default {
 
     .hamburger-lines {
         display: block;
-        height: 26px;
-        width: 32px;
+        height: 20px;
+        width: 25px;
         z-index: 2;
         display: flex;
         flex-direction: column;
@@ -56,7 +56,7 @@ export default {
 
         .line {
             display: block;
-            height: 4px;
+            height: 2px;
             width: 100%;
             border-radius: 10px;
             background-color: $font-color;
@@ -93,7 +93,7 @@ export default {
     .fade-down-menu-leave-to {
         opacity: 0;
         position: absolute;
-        bottom: $min-margin + 6rem;
+        bottom: $nav-mobile-start-bottom;
     }
 }
 </style>

@@ -95,6 +95,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@media screen and (min-width: $mobile) {
+    .submit-btn {
+        margin-bottom: $min-margin * 3;
+    }
+}
+
 @media screen and (min-width: $tablet) {
     .contatti-form-wrap {
     display: flex;
@@ -104,6 +110,10 @@ export default {
         .contatti-form {
             width: 35%;
             margin: auto 0;
+
+            .submit-btn {
+                margin-bottom: 0;
+            }
 
             .form-error {
                 margin-top: $min-margin - 1rem;

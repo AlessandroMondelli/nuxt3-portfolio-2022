@@ -14,7 +14,10 @@
     left: $left;
 }
 
-@mixin widthHeightEl( $width, $height ) {
-    width: $width;
-    height: $height;
+@mixin glass( $glass-background, $glass-box-shadow, $glass-blur, $glass-border ) {
+    background: $glass-background;
+    box-shadow: $glass-box-shadow;
+    backdrop-filter: blur( $glass-blur );
+    -webkit-backdrop-filter: blur( $glass-blur );
+    border: $glass-border;
 }

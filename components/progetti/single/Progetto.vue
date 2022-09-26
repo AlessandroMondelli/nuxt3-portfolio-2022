@@ -26,6 +26,7 @@ export default {
 @media screen and (min-width: $mobile) {
     .single-progetto-wrap {
         margin-top: $min-margin + 2rem;
+        padding-bottom: $min-margin * 3;
 
         .close-project {
             text-align: right;
@@ -41,13 +42,14 @@ export default {
     .single-progetto-wrap {
         margin-top: 0;
         margin-left: $min-margin + 2rem;
-        max-width: 60%;
+        max-width: $projects-tablet-width;
+        padding-bottom: 0;
     }
 }
 
 @media screen and (min-width: $laptop) {
     .single-progetto-wrap {
-        max-width: 50%;
+        max-width: $projects-xl-width;
     }
 }
 </style>

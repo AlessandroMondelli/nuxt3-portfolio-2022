@@ -1,13 +1,8 @@
 //Media queries
 @media screen and ( min-width: $mobile ) {
     body {
+        background-color: $first-color;
         overflow: hidden;
-        min-height: -webkit-fill-available;
-        padding:
-            env(safe-area-inset-top, 20px)
-            env(safe-area-inset-right, 20px)
-            env(safe-area-inset-bottom, 20px)
-            env(safe-area-inset-left, 20px)
     }
 
     .container, .nav-container {
@@ -31,6 +26,7 @@
 
     .all-height-content {
         height: calc( 100% - $nav-height-sm );
+        padding-bottom: $min-margin * 3;
     }
 
     .page-title {
@@ -69,6 +65,7 @@
 
     .all-height-content {
         height: calc( 100% - $nav-height-md );
+        padding-bottom: 0;
     }
 
     .page-title {

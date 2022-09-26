@@ -97,6 +97,7 @@ export default {
                 & .text-arrow {
                     transition: opacity 0.2s;
                     opacity: 0;
+                    position: absolute;
                 }
             }
         }
@@ -125,6 +126,7 @@ export default {
 
                 & .text-arrow {
                     opacity: 1;
+                    position: relative;
                 }
             }
         }

@@ -30,11 +30,14 @@ $mid-margin: 5rem;
 $max-radius: 25px;
 
 //Nav
-$nav-height-sm: 12vh;
+$nav-height-sm: 7vh;
 $nav-height-md: 10vh;
 $nav-height-lg: 8vh;
 
-$nav-mobile-bottom: $min-margin + 4rem;
+$nav-mobile-width: 95%;
+
+$nav-mobile-bottom: $min-margin + 2rem;
+$nav-mobile-start-bottom: $min-margin + 6rem;
 
 $title-animation-active-start-pos: 15px; 
 $title-animation-el-start-pos: 30px;
@@ -87,6 +90,9 @@ $skills-bulb-light-left: 50%;
 //Projects
 $progetti-langs-size-sm: 14px;
 $progetti-langs-size-md: 16px;
+
+$projects-tablet-width: 60%;
+$projects-xl-width: 50%;
 
 //Breakpoints
 $mobile: 280px;

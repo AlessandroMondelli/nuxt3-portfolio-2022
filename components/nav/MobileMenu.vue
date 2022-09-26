@@ -22,8 +22,7 @@ export default {
     position: absolute;
     bottom: $nav-mobile-bottom;
     right: $min-margin - 1.5rem;
-    text-shadow: -1px -1px 0 $first-color, 1px -1px 0 $first-color, -1px 1px 0 $first-color, 1px 1px 0 $first-color;
-
+    
     .mobile-menu {
         list-style-type: none;
         text-align: right;

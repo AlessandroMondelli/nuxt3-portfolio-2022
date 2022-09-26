@@ -54,6 +54,7 @@ export default {
                 }
 
                 margin-left: $min-margin - 0.5rem 0;
+                margin-bottom: $min-margin;
                 font-size: $profilo-list-size;
             }
         }

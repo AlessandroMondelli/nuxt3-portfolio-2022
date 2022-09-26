@@ -24,6 +24,7 @@ export default {
 <style scoped lang="scss">
 @media screen and (min-width: $mobile) {
     .skills-list {
+        padding-bottom: $min-margin * 3;
     
         h2 {
             margin-bottom: $min-margin - 0.6rem;

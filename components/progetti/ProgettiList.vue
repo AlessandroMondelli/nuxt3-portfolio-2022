@@ -22,10 +22,17 @@ export default {
 @media screen and (min-width: $mobile) {
     .progetti-list {
         list-style-type: none;
+        margin-top: $min-margin;
         
         .progetti-list-el {
             margin-bottom: ($min-margin - 1rem);
         }
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .progetti-list {
+        margin-top: 0;
     }
 }
 

@@ -1,17 +1,19 @@
 <template>
   <div class="left-nav">
-    <NuxtLink to="/" :class="{ active: route !== 'index' && route !== '' }" @click="route = 'index'; this.routeFunc.currentRoute = 'index'">amdev</NuxtLink>
+    <NuxtLink to="/" :class="{ active: route !== 'index' && route !== '' }" @click="route = 'index'; this.routeFunc.currentRoute = 'index'; hamburgerStatus.hambStat === true ? hamburgerStatus.changeState() : '' ">amdev</NuxtLink>
   </div>
 </template>
 
 <script>
 import { useRouteFunc } from '@/stores/routeFunc';
+import { useHamburgerStatus } from '@/stores/hamburgerStatus';
 
 export default {
   setup() {
     const routeFunc = useRouteFunc();
+    const hamburgerStatus = useHamburgerStatus();
 
-    return { routeFunc }
+    return { routeFunc, hamburgerStatus }
   },
   data() {
     return {
