@@ -4,7 +4,7 @@
             <a :href="'https://github.com/AlessandroMondelli/' + activeProject.githubUrl" target="__blank"><img class="logo" src="/images/github.png" alt="github logo"></a>
         </div>
         <div class="progetto-site logo-wrap" v-if="activeProject.siteUrl !== ''">
-            <a :href="'https://amdev.' + activeProject.siteUrl + '.netlify.app '" target="__blank"><img class="logo" src="/images/website.png" alt="website logo"></a>
+            <a :href="'https://' + activeProject.siteUrl" target="__blank"><img class="logo" src="/images/website.png" alt="website logo"></a>
         </div>
     </div>
 </template>
@@ -31,10 +31,10 @@ export default {
             .logo {
                 width: 30px;
                 filter: grayscale(1) invert(1);
-                transition: filter $common-transition;
+                transition: all $common-transition;
 
                 &:hover {
-                    filter: none;
+                    transform: scale(0.85);
                 }
             }
         }

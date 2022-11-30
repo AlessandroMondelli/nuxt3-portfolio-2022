@@ -1,6 +1,6 @@
 <template>
     <div class="hamburger-menu">
-        <div class="hamburger-lines" @click="hamburgerClick" :class="{ active: isActive }">
+        <div class="hamburger-lines" @click="hamburgerClick" :class="{ active: isActive, notclickable: notclickable }">
             <span class="line line1"></span>
             <span class="line line2"></span>
             <span class="line line3"></span>
@@ -18,12 +18,17 @@ export default {
     setup() {
         const hamburgerStatus = useHamburgerStatus();
 
-        return { hamburgerStatus }
+        const currentRoute = computed(() => {
+            return useRoute().name
+        })
+
+        return { hamburgerStatus, currentRoute }
     },
     props: [ 'menuList' ],
     data() {
         return {
             isActive: false,
+            notclickable: false,
         }
     },
     methods: {
@@ -32,9 +37,12 @@ export default {
             this.hamburgerStatus.changeState();
         },
         getMenuClicked( e ) { //Recupero emits voce di menu cliccata
-            if( e )
-                this.isActive = false;
-                this.hamburgerStatus.changeState();
+            this.isActive = false;
+            this.hamburgerStatus.changeState();
+
+            if( e !== this.currentRoute ) {
+                this.notclickable = true;
+            }
         }
     },
     
@@ -74,6 +82,10 @@ export default {
 
         &.active .line3 {
             transform: rotate(50deg);
+        }
+
+        &.notclickable {
+            pointer-events: none;
         }
 
         &:hover {

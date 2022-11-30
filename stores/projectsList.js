@@ -14,7 +14,7 @@ export const useProjectsList = defineStore({
                                     tech: [ 'html5', 'css' ],
                                     media: 'spotify',
                                     githubUrl: 'html-css-spotifyweb',
-                                    siteUrl: 'spotify-web',
+                                    siteUrl: 'amdev-spotify-web.netlify.app',
                                 }
                         },
                         { projectTitle: 'Hubspot',
@@ -24,7 +24,7 @@ export const useProjectsList = defineStore({
                                     tech: [ 'html5', 'css' ],
                                     media: 'hubspot',
                                     githubUrl: 'html-css-hubspot',
-                                    siteUrl: 'hubspot-layout'
+                                    siteUrl: 'amdev-hubspot-layout.netlify.app'
                                 }
                         },
                         { projectTitle: 'Digital Ocean',
@@ -34,7 +34,7 @@ export const useProjectsList = defineStore({
                                     tech: [ 'html5', 'css' ],
                                     media: 'digital_ocean',
                                     githubUrl: 'html-css-digitalocean',
-                                    siteUrl: 'amdev-digital-ocean-layout'
+                                    siteUrl: 'amdev-digital-ocean-layout.netlify.app'
                                 }
                         },
                         { projectTitle: 'NowTV',
@@ -44,7 +44,7 @@ export const useProjectsList = defineStore({
                                     tech: [ 'html5', 'css' ],
                                     media: 'nowtv',
                                     githubUrl: 'html-css-nowtv',
-                                    siteUrl: 'amdev-nowtv-layout'
+                                    siteUrl: 'amdev-nowtv-layout.netlify.app'
                                 }
                         },
                 ]
@@ -59,7 +59,7 @@ export const useProjectsList = defineStore({
                                     tech: [ 'html5', 'css', 'javascript', 'jquery' ],
                                     media: 'whatsapp',
                                     githubUrl: 'html-css-nowtv',
-                                    siteUrl: 'amdev-whatsapp-replica'
+                                    siteUrl: 'amdev-whatsapp-replica.netlify.app'
                                 }
                         },
                         { projectTitle: 'Replica catalogo Netflix',
@@ -69,7 +69,7 @@ export const useProjectsList = defineStore({
                                     tech: [ 'html5', 'css', 'javascript', 'jquery', 'handlebars' ],
                                     media: 'boolflix',
                                     githubUrl: 'ajax-ex-boolflix',
-                                    siteUrl: 'amdev-netflix-replica'
+                                    siteUrl: 'amdev-netflix-replica.netlify.app'
                                 }
                         },
                 ]
@@ -84,7 +84,7 @@ export const useProjectsList = defineStore({
                                 tech: [ 'html5', 'css', 'javascript', 'vue' ],
                                 media: 'tombola',
                                 githubUrl: 'vue-tombola',
-                                siteUrl: 'amdev-vue-tombola'
+                                siteUrl: 'amdev-vue-tombola.netlify.app'
                             }
                         },
                         { projectTitle: 'VueCovid-19',
@@ -144,7 +144,7 @@ export const useProjectsList = defineStore({
                                     tech: [ 'css', 'javascript', 'jquery', 'php', 'wordpress' ],
                                     media: '',
                                     githubUrl: '',
-                                    siteUrl: ''
+                                    siteUrl: 'isegno.com'
                                 }
                         },
                         { projectTitle: 'Portale esami con LMS per certificazione BIM',
@@ -164,7 +164,7 @@ export const useProjectsList = defineStore({
                                     tech: [ 'css', 'javascript', 'jquery', 'php', 'mysql', 'wordpress' ],
                                     media: '',
                                     githubUrl: '',
-                                    siteUrl: ''
+                                    siteUrl: 'certificazionebim.com'
                                 }
                         },
                         { projectTitle: 'E-Commerce e LMS corsi BIM',
